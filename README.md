@@ -121,7 +121,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://opens
 - **Project Link**: [https://github.com/xiufengliu/mcdm](https://github.com/xiufengliu/mcdm)
 
 ## Acknowledgments
-[List any acknowledgments, funding sources, or collaborators]
+This research was supported in part by the RE-INTEGRATE project (no. 101118217) funded by the European Union Horizon 2020 research and innovation programme and by the European Union's Horizon 2020 through the EU Framework Program for Research and Innovation, within the EMB3Rs project under agreement no. 847121.
 ```
 
 This markdown file is clean and well-structured, ready to be used as a `README.md` for your project. Let me know if you need further adjustments!
