@@ -29,7 +29,7 @@ This repository contains the implementation and analysis of multiple MCDM method
 ## Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mcdm.git
+git clone https://github.com/xiufengliu/mcdm.git
 
 # Navigate to the project directory
 cd mcdm
