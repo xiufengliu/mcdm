@@ -1,0 +1,853 @@
+2025-01-03 15:03:39,081 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:03:39,081 - __main__ - INFO - ==================================================
+2025-01-03 15:03:39,083 - __main__ - ERROR - Error in main execution: 'seaborn' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+2025-01-03 15:05:43,619 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:05:43,619 - __main__ - INFO - ==================================================
+2025-01-03 15:05:43,619 - __main__ - ERROR - Error in main execution: 'seaborn' is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+2025-01-03 15:06:30,599 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:06:30,599 - __main__ - INFO - ==================================================
+2025-01-03 15:06:30,600 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:06:30,600 - __main__ - INFO - ==================================================
+2025-01-03 15:06:32,406 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:32,443 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:32,533 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:32,533 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.48934085778076764), 'std': np.float64(0.25660653022126495), 'skewness': np.float64(-0.3231584615653396), 'kurtosis': np.float64(-1.5000000000000004)}
+2025-01-03 15:06:32,534 - __main__ - INFO - Stability Scores: {'Internal Heat Recovery': np.float64(1.0), 'Alternative Fuel Drying': np.float64(1.0), 'District Heating': np.float64(1.0)}
+2025-01-03 15:06:32,534 - __main__ - INFO - Criteria Importance: {'Investment Cost': {'weight': np.float64(0.1748159979302938), 'relative_importance': np.float64(0.6992639917211751), 'percentile': np.float64(75.0)}, 'Operational Cost': {'weight': np.float64(0.08634831223484896), 'relative_importance': np.float64(0.3453932489393958), 'percentile': np.float64(50.0)}, 'CO2 Reduction': {'weight': np.float64(0.6608111818911193), 'relative_importance': np.float64(2.6432447275644773), 'percentile': np.float64(100.0)}, 'Social Acceptance': {'weight': np.float64(0.07802450794373797), 'relative_importance': np.float64(0.3120980317749519), 'percentile': np.float64(25.0)}}
+2025-01-03 15:06:32,535 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:06:32,535 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:06:32,536 - __main__ - INFO - ==================================================
+2025-01-03 15:06:33,225 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:33,229 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:33,314 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:33,314 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.49436286109803634), 'std': np.float64(0.11598897670242016), 'skewness': np.float64(0.1448835638546355), 'kurtosis': np.float64(-1.5000000000000007)}
+2025-01-03 15:06:33,315 - __main__ - INFO - Stability Scores: {'Electricity Generation': np.float64(1.0), 'Heat-to-Fuel Conversion': np.float64(1.0), 'Process Integration': np.float64(1.0)}
+2025-01-03 15:06:33,316 - __main__ - INFO - Criteria Importance: {'NPV': {'weight': np.float64(0.5322825534926542), 'relative_importance': np.float64(2.129130213970617), 'percentile': np.float64(100.0)}, 'Payback Period': {'weight': np.float64(0.11556840066776153), 'relative_importance': np.float64(0.46227360267104617), 'percentile': np.float64(25.0)}, 'Environmental Impact': {'weight': np.float64(0.22083799084919814), 'relative_importance': np.float64(0.8833519633967927), 'percentile': np.float64(75.0)}, 'Land Use Compatibility': {'weight': np.float64(0.13131105499038612), 'relative_importance': np.float64(0.5252442199615446), 'percentile': np.float64(50.0)}}
+2025-01-03 15:06:33,317 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(2), 'rank_probability': array([[0., 1., 0.],
+       [0., 0., 1.],
+       [1., 0., 0.]])}
+2025-01-03 15:06:33,317 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:06:33,317 - __main__ - INFO - ==================================================
+2025-01-03 15:06:33,945 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:33,949 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:34,038 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:34,038 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.4878565338184227), 'std': np.float64(0.3212547049854834), 'skewness': np.float64(-0.035955489932489114), 'kurtosis': np.float64(-1.4999999999999998)}
+2025-01-03 15:06:34,039 - __main__ - INFO - Stability Scores: {'Inter-industry Heat Exchange': np.float64(1.0), 'Integration with DH Network': np.float64(1.0), 'Individual Solutions': np.float64(1.0)}
+2025-01-03 15:06:34,039 - __main__ - INFO - Criteria Importance: {'Economic Synergy': {'weight': np.float64(0.4231469745605192), 'relative_importance': np.float64(1.6925878982420763), 'percentile': np.float64(100.0)}, 'Energy Efficiency': {'weight': np.float64(0.22735050780241758), 'relative_importance': np.float64(0.9094020312096701), 'percentile': np.float64(62.5)}, 'External Dependence': {'weight': np.float64(0.22735050780241758), 'relative_importance': np.float64(0.9094020312096701), 'percentile': np.float64(62.5)}, 'Ease of Implementation': {'weight': np.float64(0.12215200983464576), 'relative_importance': np.float64(0.48860803933858293), 'percentile': np.float64(25.0)}}
+2025-01-03 15:06:34,040 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:06:34,040 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:06:34,041 - __main__ - INFO - ==================================================
+2025-01-03 15:06:34,716 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:34,719 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:34,791 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:34,792 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5), 'std': np.float64(0.5), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0)}
+2025-01-03 15:06:34,792 - __main__ - INFO - Stability Scores: {'DH Network Integration': np.float64(1.0), 'Process Steam Supply': np.float64(1.0)}
+2025-01-03 15:06:34,793 - __main__ - INFO - Criteria Importance: {'Investment Cost': {'weight': np.float64(0.11505309073133378), 'relative_importance': np.float64(0.5752654536566689), 'percentile': np.float64(40.0)}, 'Operational Cost': {'weight': np.float64(0.06853470417565476), 'relative_importance': np.float64(0.34267352087827374), 'percentile': np.float64(20.0)}, 'CO2 Reduction': {'weight': np.float64(0.31086425577263666), 'relative_importance': np.float64(1.5543212788631833), 'percentile': np.float64(80.0)}, 'Public Acceptance': {'weight': np.float64(0.13216129606040775), 'relative_importance': np.float64(0.6608064803020387), 'percentile': np.float64(60.0)}, 'Regulatory Compliance': {'weight': np.float64(0.37338665325996706), 'relative_importance': np.float64(1.8669332662998352), 'percentile': np.float64(100.0)}}
+2025-01-03 15:06:34,793 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0.],
+       [0., 1.]])}
+2025-01-03 15:06:34,794 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:06:34,794 - __main__ - INFO - ==================================================
+2025-01-03 15:06:35,416 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:35,419 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:35,676 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:35,676 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5), 'std': np.float64(0.0021033655635481763), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0)}
+2025-01-03 15:06:35,676 - __main__ - INFO - Stability Scores: {'DH Expansion with Industrial Heat': np.float64(0.75), 'Individual Industry Solutions': np.float64(0.75)}
+2025-01-03 15:06:35,677 - __main__ - INFO - Criteria Importance: {'Cost-Effectiveness': {'weight': np.float64(0.42314697456051914), 'relative_importance': np.float64(1.6925878982420768), 'percentile': np.float64(100.0)}, 'Contract Feasibility': {'weight': np.float64(0.22735050780241753), 'relative_importance': np.float64(0.9094020312096702), 'percentile': np.float64(62.5)}, 'Scalability': {'weight': np.float64(0.12215200983464573), 'relative_importance': np.float64(0.488608039338583), 'percentile': np.float64(25.0)}, 'Stakeholder Alignment': {'weight': np.float64(0.22735050780241753), 'relative_importance': np.float64(0.9094020312096702), 'percentile': np.float64(62.5)}}
+2025-01-03 15:06:35,678 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([0.96875, 0.96875]), 'rank_confidence': np.int64(0), 'rank_probability': array([[0.5, 0.5],
+       [0.5, 0.5]])}
+2025-01-03 15:06:35,678 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:06:35,678 - __main__ - INFO - ==================================================
+2025-01-03 15:06:36,395 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:36,399 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:06:36,486 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:06:36,486 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5045767097960125), 'std': np.float64(0.29585072866222917), 'skewness': np.float64(0.07497120744662013), 'kurtosis': np.float64(-1.5000000000000002)}
+2025-01-03 15:06:36,486 - __main__ - INFO - Stability Scores: {'Heat Pump Integration': np.float64(1.0), 'Process Heat Recovery': np.float64(1.0), 'External Heat Supply': np.float64(1.0)}
+2025-01-03 15:06:36,487 - __main__ - INFO - Criteria Importance: {'Technical Feasibility': {'weight': np.float64(0.27758981680244404), 'relative_importance': np.float64(1.1103592672097762), 'percentile': np.float64(75.0)}, 'Economic Viability': {'weight': np.float64(0.46684856372022104), 'relative_importance': np.float64(1.8673942548808842), 'percentile': np.float64(100.0)}, 'Environmental Impact': {'weight': np.float64(0.16026655545518997), 'relative_importance': np.float64(0.6410662218207599), 'percentile': np.float64(50.0)}, 'Implementation Time': {'weight': np.float64(0.09529506402214503), 'relative_importance': np.float64(0.38118025608858014), 'percentile': np.float64(25.0)}}
+2025-01-03 15:06:36,487 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(1), 'rank_probability': array([[0., 1., 0.],
+       [1., 0., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:06:36,488 - __main__ - INFO - 
+
+Comparative Analysis
+2025-01-03 15:06:36,488 - __main__ - INFO - ==================================================
+2025-01-03 15:06:36,489 - __main__ - INFO - 
+Consistency Ratio Comparison:
+2025-01-03 15:06:36,489 - __main__ - INFO - case5: 0.004
+2025-01-03 15:06:36,490 - __main__ - INFO - case3: 0.004
+2025-01-03 15:06:36,490 - __main__ - INFO - case4: 0.009
+2025-01-03 15:06:36,490 - __main__ - INFO - case6: 0.011
+2025-01-03 15:06:36,491 - __main__ - INFO - case2: 0.018
+2025-01-03 15:06:36,491 - __main__ - INFO - case1: 0.020
+2025-01-03 15:06:36,491 - __main__ - ERROR - Error in main execution: 'ranking_spread'
+2025-01-03 15:09:09,103 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:09:09,103 - __main__ - INFO - ==================================================
+2025-01-03 15:09:09,104 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:09:09,104 - __main__ - INFO - ==================================================
+2025-01-03 15:09:09,640 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:09,645 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:09,735 - __main__ - INFO - 
+Results for case1:
+2025-01-03 15:09:09,735 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:09,735 - __main__ - INFO - Consistency Ratio: 0.020
+2025-01-03 15:09:09,736 - __main__ - INFO - Ranking Spread: 0.621
+2025-01-03 15:09:09,736 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:09,737 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.48934085778076764), 'std': np.float64(0.25660653022126495), 'skewness': np.float64(-0.3231584615653396), 'kurtosis': np.float64(-1.5000000000000004)}
+2025-01-03 15:09:09,737 - __main__ - INFO - Stability Scores: {'Internal Heat Recovery': np.float64(1.0), 'Alternative Fuel Drying': np.float64(1.0), 'District Heating': np.float64(1.0)}
+2025-01-03 15:09:09,738 - __main__ - INFO - Criteria Importance: {'Investment Cost': {'weight': np.float64(0.1748159979302938), 'relative_importance': np.float64(0.6992639917211751), 'percentile': np.float64(75.0)}, 'Operational Cost': {'weight': np.float64(0.08634831223484896), 'relative_importance': np.float64(0.3453932489393958), 'percentile': np.float64(50.0)}, 'CO2 Reduction': {'weight': np.float64(0.6608111818911193), 'relative_importance': np.float64(2.6432447275644773), 'percentile': np.float64(100.0)}, 'Social Acceptance': {'weight': np.float64(0.07802450794373797), 'relative_importance': np.float64(0.3120980317749519), 'percentile': np.float64(25.0)}}
+2025-01-03 15:09:09,738 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:09:09,739 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:09:09,739 - __main__ - INFO - ==================================================
+2025-01-03 15:09:10,220 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:10,224 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:10,311 - __main__ - INFO - 
+Results for case2:
+2025-01-03 15:09:10,311 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:10,311 - __main__ - INFO - Consistency Ratio: 0.018
+2025-01-03 15:09:10,312 - __main__ - INFO - Ranking Spread: 0.283
+2025-01-03 15:09:10,313 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:10,313 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.49436286109803634), 'std': np.float64(0.11598897670242016), 'skewness': np.float64(0.1448835638546355), 'kurtosis': np.float64(-1.5000000000000007)}
+2025-01-03 15:09:10,313 - __main__ - INFO - Stability Scores: {'Electricity Generation': np.float64(1.0), 'Heat-to-Fuel Conversion': np.float64(1.0), 'Process Integration': np.float64(1.0)}
+2025-01-03 15:09:10,314 - __main__ - INFO - Criteria Importance: {'NPV': {'weight': np.float64(0.5322825534926542), 'relative_importance': np.float64(2.129130213970617), 'percentile': np.float64(100.0)}, 'Payback Period': {'weight': np.float64(0.11556840066776153), 'relative_importance': np.float64(0.46227360267104617), 'percentile': np.float64(25.0)}, 'Environmental Impact': {'weight': np.float64(0.22083799084919814), 'relative_importance': np.float64(0.8833519633967927), 'percentile': np.float64(75.0)}, 'Land Use Compatibility': {'weight': np.float64(0.13131105499038612), 'relative_importance': np.float64(0.5252442199615446), 'percentile': np.float64(50.0)}}
+2025-01-03 15:09:10,315 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(2), 'rank_probability': array([[0., 1., 0.],
+       [0., 0., 1.],
+       [1., 0., 0.]])}
+2025-01-03 15:09:10,315 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:09:10,315 - __main__ - INFO - ==================================================
+2025-01-03 15:09:10,848 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:10,852 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:10,939 - __main__ - INFO - 
+Results for case3:
+2025-01-03 15:09:10,939 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:10,939 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:09:10,939 - __main__ - INFO - Ranking Spread: 0.787
+2025-01-03 15:09:10,940 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:10,941 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.4878565338184227), 'std': np.float64(0.3212547049854834), 'skewness': np.float64(-0.035955489932489114), 'kurtosis': np.float64(-1.4999999999999998)}
+2025-01-03 15:09:10,941 - __main__ - INFO - Stability Scores: {'Inter-industry Heat Exchange': np.float64(1.0), 'Integration with DH Network': np.float64(1.0), 'Individual Solutions': np.float64(1.0)}
+2025-01-03 15:09:10,941 - __main__ - INFO - Criteria Importance: {'Economic Synergy': {'weight': np.float64(0.4231469745605192), 'relative_importance': np.float64(1.6925878982420763), 'percentile': np.float64(100.0)}, 'Energy Efficiency': {'weight': np.float64(0.22735050780241758), 'relative_importance': np.float64(0.9094020312096701), 'percentile': np.float64(62.5)}, 'External Dependence': {'weight': np.float64(0.22735050780241758), 'relative_importance': np.float64(0.9094020312096701), 'percentile': np.float64(62.5)}, 'Ease of Implementation': {'weight': np.float64(0.12215200983464576), 'relative_importance': np.float64(0.48860803933858293), 'percentile': np.float64(25.0)}}
+2025-01-03 15:09:10,942 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:09:10,942 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:09:10,943 - __main__ - INFO - ==================================================
+2025-01-03 15:09:11,437 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:11,441 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:11,512 - __main__ - INFO - 
+Results for case4:
+2025-01-03 15:09:11,512 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:11,512 - __main__ - INFO - Consistency Ratio: 0.009
+2025-01-03 15:09:11,513 - __main__ - INFO - Ranking Spread: 1.000
+2025-01-03 15:09:11,513 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:11,514 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5), 'std': np.float64(0.5), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0)}
+2025-01-03 15:09:11,514 - __main__ - INFO - Stability Scores: {'DH Network Integration': np.float64(1.0), 'Process Steam Supply': np.float64(1.0)}
+2025-01-03 15:09:11,515 - __main__ - INFO - Criteria Importance: {'Investment Cost': {'weight': np.float64(0.11505309073133378), 'relative_importance': np.float64(0.5752654536566689), 'percentile': np.float64(40.0)}, 'Operational Cost': {'weight': np.float64(0.06853470417565476), 'relative_importance': np.float64(0.34267352087827374), 'percentile': np.float64(20.0)}, 'CO2 Reduction': {'weight': np.float64(0.31086425577263666), 'relative_importance': np.float64(1.5543212788631833), 'percentile': np.float64(80.0)}, 'Public Acceptance': {'weight': np.float64(0.13216129606040775), 'relative_importance': np.float64(0.6608064803020387), 'percentile': np.float64(60.0)}, 'Regulatory Compliance': {'weight': np.float64(0.37338665325996706), 'relative_importance': np.float64(1.8669332662998352), 'percentile': np.float64(100.0)}}
+2025-01-03 15:09:11,515 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1.]), 'rank_confidence': np.int64(0), 'rank_probability': array([[1., 0.],
+       [0., 1.]])}
+2025-01-03 15:09:11,516 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:09:11,516 - __main__ - INFO - ==================================================
+2025-01-03 15:09:11,991 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:11,994 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:12,080 - __main__ - INFO - 
+Results for case5:
+2025-01-03 15:09:12,081 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:12,081 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:09:12,081 - __main__ - INFO - Ranking Spread: 0.004
+2025-01-03 15:09:12,082 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:12,082 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5), 'std': np.float64(0.0021033655635481763), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0)}
+2025-01-03 15:09:12,082 - __main__ - INFO - Stability Scores: {'DH Expansion with Industrial Heat': np.float64(0.75), 'Individual Industry Solutions': np.float64(0.75)}
+2025-01-03 15:09:12,083 - __main__ - INFO - Criteria Importance: {'Cost-Effectiveness': {'weight': np.float64(0.42314697456051914), 'relative_importance': np.float64(1.6925878982420768), 'percentile': np.float64(100.0)}, 'Contract Feasibility': {'weight': np.float64(0.22735050780241753), 'relative_importance': np.float64(0.9094020312096702), 'percentile': np.float64(62.5)}, 'Scalability': {'weight': np.float64(0.12215200983464573), 'relative_importance': np.float64(0.488608039338583), 'percentile': np.float64(25.0)}, 'Stakeholder Alignment': {'weight': np.float64(0.22735050780241753), 'relative_importance': np.float64(0.9094020312096702), 'percentile': np.float64(62.5)}}
+2025-01-03 15:09:12,083 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([0.96875, 0.96875]), 'rank_confidence': np.int64(0), 'rank_probability': array([[0.5, 0.5],
+       [0.5, 0.5]])}
+2025-01-03 15:09:12,084 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:09:12,084 - __main__ - INFO - ==================================================
+2025-01-03 15:09:12,558 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:12,562 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:09:12,649 - __main__ - INFO - 
+Results for case6:
+2025-01-03 15:09:12,649 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:09:12,649 - __main__ - INFO - Consistency Ratio: 0.011
+2025-01-03 15:09:12,650 - __main__ - INFO - Ranking Spread: 0.724
+2025-01-03 15:09:12,650 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:09:12,651 - __main__ - INFO - Ranking Statistics: {'mean': np.float64(0.5045767097960125), 'std': np.float64(0.29585072866222917), 'skewness': np.float64(0.07497120744662013), 'kurtosis': np.float64(-1.5000000000000002)}
+2025-01-03 15:09:12,651 - __main__ - INFO - Stability Scores: {'Heat Pump Integration': np.float64(1.0), 'Process Heat Recovery': np.float64(1.0), 'External Heat Supply': np.float64(1.0)}
+2025-01-03 15:09:12,652 - __main__ - INFO - Criteria Importance: {'Technical Feasibility': {'weight': np.float64(0.27758981680244404), 'relative_importance': np.float64(1.1103592672097762), 'percentile': np.float64(75.0)}, 'Economic Viability': {'weight': np.float64(0.46684856372022104), 'relative_importance': np.float64(1.8673942548808842), 'percentile': np.float64(100.0)}, 'Environmental Impact': {'weight': np.float64(0.16026655545518997), 'relative_importance': np.float64(0.6410662218207599), 'percentile': np.float64(50.0)}, 'Implementation Time': {'weight': np.float64(0.09529506402214503), 'relative_importance': np.float64(0.38118025608858014), 'percentile': np.float64(25.0)}}
+2025-01-03 15:09:12,652 - __main__ - INFO - Robustness Analysis: {'rank_stability': array([1., 1., 1.]), 'rank_confidence': np.int64(1), 'rank_probability': array([[0., 1., 0.],
+       [1., 0., 0.],
+       [0., 0., 1.]])}
+2025-01-03 15:09:12,653 - __main__ - INFO - 
+
+Comparative Analysis
+2025-01-03 15:09:12,653 - __main__ - INFO - ==================================================
+2025-01-03 15:09:12,653 - __main__ - INFO - 
+Consistency Ratio Comparison:
+2025-01-03 15:09:12,654 - __main__ - INFO - case5: 0.004
+2025-01-03 15:09:12,654 - __main__ - INFO - case3: 0.004
+2025-01-03 15:09:12,655 - __main__ - INFO - case4: 0.009
+2025-01-03 15:09:12,655 - __main__ - INFO - case6: 0.011
+2025-01-03 15:09:12,656 - __main__ - INFO - case2: 0.018
+2025-01-03 15:09:12,656 - __main__ - INFO - case1: 0.020
+2025-01-03 15:09:12,656 - __main__ - INFO - 
+Ranking Spread Comparison:
+2025-01-03 15:09:12,657 - __main__ - INFO - case4: 1.000
+2025-01-03 15:09:12,657 - __main__ - INFO - case3: 0.787
+2025-01-03 15:09:12,658 - __main__ - INFO - case6: 0.724
+2025-01-03 15:09:12,658 - __main__ - INFO - case1: 0.621
+2025-01-03 15:09:12,658 - __main__ - INFO - case2: 0.283
+2025-01-03 15:09:12,659 - __main__ - INFO - case5: 0.004
+2025-01-03 15:14:38,312 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:14:38,312 - __main__ - INFO - ==================================================
+2025-01-03 15:14:38,313 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:14:38,314 - __main__ - INFO - ==================================================
+2025-01-03 15:14:38,856 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:14:38,860 - matplotlib.category - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-01-03 15:14:38,980 - __main__ - ERROR - Error analyzing case case1: 'MCDMStatistics' object has no attribute 'analyze_sensitivity'
+2025-01-03 15:14:38,980 - __main__ - ERROR - Error in main execution: 'MCDMStatistics' object has no attribute 'analyze_sensitivity'
+2025-01-03 15:16:29,057 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:16:29,057 - __main__ - INFO - ==================================================
+2025-01-03 15:16:29,058 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:16:29,059 - __main__ - INFO - ==================================================
+2025-01-03 15:16:29,296 - __main__ - ERROR - Error analyzing case case1: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=4.
+2025-01-03 15:16:29,296 - __main__ - ERROR - Error in main execution: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=4.
+2025-01-03 15:18:49,052 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:18:49,052 - __main__ - INFO - ==================================================
+2025-01-03 15:18:49,052 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:18:49,053 - __main__ - INFO - ==================================================
+2025-01-03 15:18:49,343 - __main__ - ERROR - Error analyzing case case1: invalid index to scalar variable.
+2025-01-03 15:18:49,343 - __main__ - ERROR - Error in main execution: invalid index to scalar variable.
+2025-01-03 15:19:50,631 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:19:50,631 - __main__ - INFO - ==================================================
+2025-01-03 15:19:50,632 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:19:50,633 - __main__ - INFO - ==================================================
+2025-01-03 15:19:50,854 - __main__ - INFO - 
+Results for case1:
+2025-01-03 15:19:50,854 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:50,854 - __main__ - INFO - Consistency Ratio: 0.020
+2025-01-03 15:19:50,855 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:50,856 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.48934085778076764), 'std': np.float64(0.25660653022126495), 'skewness': np.float64(-0.3231584615653396), 'kurtosis': np.float64(-1.5000000000000004), 'variance': np.float64(0.06584691135219696), 'coefficient_of_variation': np.float64(0.5243922025743223)}, 'confidence_intervals': {'95%': (np.float64(-0.2913678110441058), np.float64(1.270049526605641)), '99%': (np.float64(-1.3115042511461488), np.float64(2.290185966707684))}, 'ranking_distribution': {0.7711055368976698: 1, 0.5465162528097527: 1, 0.1504007836348804: 1}, 'normality_test': None}
+2025-01-03 15:19:50,857 - __main__ - INFO - Stability Scores: {'Internal Heat Recovery': np.float64(1.0), 'Alternative Fuel Drying': np.float64(1.0), 'District Heating': np.float64(1.0)}
+2025-01-03 15:19:50,857 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Investment Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Operational Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'CO2 Reduction': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Social Acceptance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:50,858 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.7716130954722957), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:19:50,859 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:19:50,859 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,051 - __main__ - INFO - 
+Results for case2:
+2025-01-03 15:19:51,051 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:51,051 - __main__ - INFO - Consistency Ratio: 0.018
+2025-01-03 15:19:51,051 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:51,051 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.49436286109803634), 'std': np.float64(0.11598897670242016), 'skewness': np.float64(0.1448835638546355), 'kurtosis': np.float64(-1.5000000000000007), 'variance': np.float64(0.013453442716474565), 'coefficient_of_variation': np.float64(0.2346231600909409)}, 'confidence_intervals': {'95%': (np.float64(0.14147394778151334), np.float64(0.8472517744145593)), '99%': (np.float64(-0.31963895406964987), np.float64(1.3083646762657226))}, 'ranking_distribution': {0.48308858329410886: 1, 0.3582790344736822: 1, 0.6417209655263177: 1}, 'normality_test': None}
+2025-01-03 15:19:51,052 - __main__ - INFO - Stability Scores: {'Electricity Generation': np.float64(1.0), 'Heat-to-Fuel Conversion': np.float64(1.0), 'Process Integration': np.float64(1.0)}
+2025-01-03 15:19:51,053 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'NPV': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Payback Period': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Environmental Impact': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Land Use Compatibility': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:51,053 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.09931938715926572), 'avg_cv_score': np.float64(1.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:19:51,054 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:19:51,054 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,249 - __main__ - INFO - 
+Results for case3:
+2025-01-03 15:19:51,249 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:51,249 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:19:51,250 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:51,250 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.4878565338184227), 'std': np.float64(0.3212547049854834), 'skewness': np.float64(-0.035955489932489114), 'kurtosis': np.float64(-1.4999999999999998), 'variance': np.float64(0.10320458547530999), 'coefficient_of_variation': np.float64(0.6585024135498255)}, 'confidence_intervals': {'95%': (np.float64(-0.4895399995694089), np.float64(1.4652530672062543)), '99%': (np.float64(-1.7666845477901258), np.float64(2.742397615426971))}, 'ranking_distribution': {0.8774032545663176: 1, 0.4955600671357955: 1, 0.09060627975315512: 1}, 'normality_test': None}
+2025-01-03 15:19:51,251 - __main__ - INFO - Stability Scores: {'Inter-industry Heat Exchange': np.float64(1.0), 'Integration with DH Network': np.float64(1.0), 'Individual Solutions': np.float64(1.0)}
+2025-01-03 15:19:51,252 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Economic Synergy': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Energy Efficiency': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'External Dependence': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Ease of Implementation': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:51,253 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.11533596291382785), 'avg_cv_score': np.float64(0.75), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:19:51,254 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:19:51,254 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,448 - __main__ - INFO - 
+Results for case4:
+2025-01-03 15:19:51,448 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:51,448 - __main__ - INFO - Consistency Ratio: 0.009
+2025-01-03 15:19:51,449 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:51,450 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5), 'std': np.float64(0.5), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0), 'variance': np.float64(0.25), 'coefficient_of_variation': np.float64(1.0)}, 'confidence_intervals': {'95%': (np.float64(-5.853102368216048), np.float64(6.853102368216048)), '99%': (np.float64(-31.328370581436996), np.float64(32.328370581437))}, 'ranking_distribution': {1.0: 1, 0.0: 1}, 'normality_test': None}
+2025-01-03 15:19:51,452 - __main__ - INFO - Stability Scores: {'DH Network Integration': np.float64(1.0), 'Process Steam Supply': np.float64(1.0)}
+2025-01-03 15:19:51,452 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Investment Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Operational Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'CO2 Reduction': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Public Acceptance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Regulatory Compliance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:51,453 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.038600209448880374), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 5}
+2025-01-03 15:19:51,454 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:19:51,454 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,697 - __main__ - INFO - 
+Results for case5:
+2025-01-03 15:19:51,698 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:51,698 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:19:51,699 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:51,699 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5), 'std': np.float64(0.0021033655635481763), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0), 'variance': np.float64(4.424146693920337e-06), 'coefficient_of_variation': np.float64(0.0042067311270963526)}, 'confidence_intervals': {'95%': (np.float64(0.473274206513996), np.float64(0.526725793486004)), '99%': (np.float64(0.36610660275031115), np.float64(0.6338933972496889))}, 'ranking_distribution': {0.4978966344364518: 1, 0.5021033655635482: 1}, 'normality_test': None}
+2025-01-03 15:19:51,700 - __main__ - INFO - Stability Scores: {'DH Expansion with Industrial Heat': np.float64(0.75), 'Individual Industry Solutions': np.float64(0.75)}
+2025-01-03 15:19:51,701 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Cost-Effectiveness': {'slope': np.float64(3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Contract Feasibility': {'slope': np.float64(3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Scalability': {'slope': np.float64(-3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Stakeholder Alignment': {'slope': np.float64(-3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:51,701 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.018548960754272925), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:19:51,702 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:19:51,703 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,881 - __main__ - INFO - 
+Results for case6:
+2025-01-03 15:19:51,882 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:19:51,882 - __main__ - INFO - Consistency Ratio: 0.011
+2025-01-03 15:19:51,882 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:19:51,883 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5045767097960125), 'std': np.float64(0.29585072866222917), 'skewness': np.float64(0.07497120744662013), 'kurtosis': np.float64(-1.5000000000000002), 'variance': np.float64(0.08752765364997193), 'coefficient_of_variation': np.float64(0.5863344917006456)}, 'confidence_intervals': {'95%': (np.float64(-0.39552987886171065), np.float64(1.4046832984537359)), '99%': (np.float64(-1.5716811984670256), np.float64(2.5808346180590505))}, 'ranking_distribution': {0.4897651025235957: 1, 0.8740970570402673: 1, 0.1498679698241747: 1}, 'normality_test': None}
+2025-01-03 15:19:51,884 - __main__ - INFO - Stability Scores: {'Heat Pump Integration': np.float64(1.0), 'Process Heat Recovery': np.float64(1.0), 'External Heat Supply': np.float64(1.0)}
+2025-01-03 15:19:51,884 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Technical Feasibility': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Economic Viability': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Environmental Impact': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Implementation Time': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:19:51,885 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.06627200860160659), 'avg_cv_score': np.float64(1.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:19:51,885 - __main__ - INFO - 
+
+Comparative Analysis
+2025-01-03 15:19:51,886 - __main__ - INFO - ==================================================
+2025-01-03 15:19:51,886 - __main__ - INFO - 
+Consistency Ratio Comparison:
+2025-01-03 15:19:51,887 - __main__ - INFO - case5: 0.004
+2025-01-03 15:19:51,887 - __main__ - INFO - case3: 0.004
+2025-01-03 15:19:51,888 - __main__ - INFO - case4: 0.009
+2025-01-03 15:19:51,888 - __main__ - INFO - case6: 0.011
+2025-01-03 15:19:51,889 - __main__ - INFO - case2: 0.018
+2025-01-03 15:19:51,890 - __main__ - INFO - case1: 0.020
+2025-01-03 15:19:51,890 - __main__ - ERROR - Error in main execution: 'ranking_spread'
+2025-01-03 15:20:57,222 - __main__ - INFO - Starting MCDM Analysis for all cases
+2025-01-03 15:20:57,222 - __main__ - INFO - ==================================================
+2025-01-03 15:20:57,223 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:20:57,249 - __main__ - INFO - ==================================================
+2025-01-03 15:20:57,486 - __main__ - INFO - 
+Results for case1:
+2025-01-03 15:20:57,486 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:57,486 - __main__ - INFO - Consistency Ratio: 0.020
+2025-01-03 15:20:57,487 - __main__ - INFO - Ranking Spread: 0.621
+2025-01-03 15:20:57,488 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:57,489 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.48934085778076764), 'std': np.float64(0.25660653022126495), 'skewness': np.float64(-0.3231584615653396), 'kurtosis': np.float64(-1.5000000000000004), 'variance': np.float64(0.06584691135219696), 'coefficient_of_variation': np.float64(0.5243922025743223)}, 'confidence_intervals': {'95%': (np.float64(-0.2913678110441058), np.float64(1.270049526605641)), '99%': (np.float64(-1.3115042511461488), np.float64(2.290185966707684))}, 'ranking_distribution': {0.7711055368976698: 1, 0.5465162528097527: 1, 0.1504007836348804: 1}, 'normality_test': None, 'ranking_spread': np.float64(0.6207047532627894)}
+2025-01-03 15:20:57,490 - __main__ - INFO - Stability Scores: {'Internal Heat Recovery': np.float64(1.0), 'Alternative Fuel Drying': np.float64(1.0), 'District Heating': np.float64(1.0)}
+2025-01-03 15:20:57,491 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Investment Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Operational Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'CO2 Reduction': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Social Acceptance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:57,492 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.7716130954722957), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:20:57,493 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:20:57,494 - __main__ - INFO - ==================================================
+2025-01-03 15:20:57,719 - __main__ - INFO - 
+Results for case2:
+2025-01-03 15:20:57,719 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:57,719 - __main__ - INFO - Consistency Ratio: 0.018
+2025-01-03 15:20:57,819 - __main__ - INFO - Ranking Spread: 0.283
+2025-01-03 15:20:57,827 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:57,829 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.49436286109803634), 'std': np.float64(0.11598897670242016), 'skewness': np.float64(0.1448835638546355), 'kurtosis': np.float64(-1.5000000000000007), 'variance': np.float64(0.013453442716474565), 'coefficient_of_variation': np.float64(0.2346231600909409)}, 'confidence_intervals': {'95%': (np.float64(0.14147394778151334), np.float64(0.8472517744145593)), '99%': (np.float64(-0.31963895406964987), np.float64(1.3083646762657226))}, 'ranking_distribution': {0.48308858329410886: 1, 0.3582790344736822: 1, 0.6417209655263177: 1}, 'normality_test': None, 'ranking_spread': np.float64(0.28344193105263554)}
+2025-01-03 15:20:57,830 - __main__ - INFO - Stability Scores: {'Electricity Generation': np.float64(1.0), 'Heat-to-Fuel Conversion': np.float64(1.0), 'Process Integration': np.float64(1.0)}
+2025-01-03 15:20:57,832 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'NPV': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Payback Period': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Environmental Impact': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Land Use Compatibility': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:57,850 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.09931938715926572), 'avg_cv_score': np.float64(1.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:20:57,852 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:20:57,853 - __main__ - INFO - ==================================================
+2025-01-03 15:20:58,086 - __main__ - INFO - 
+Results for case3:
+2025-01-03 15:20:58,086 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:58,086 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:20:58,088 - __main__ - INFO - Ranking Spread: 0.787
+2025-01-03 15:20:58,088 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:58,089 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.4878565338184227), 'std': np.float64(0.3212547049854834), 'skewness': np.float64(-0.035955489932489114), 'kurtosis': np.float64(-1.4999999999999998), 'variance': np.float64(0.10320458547530999), 'coefficient_of_variation': np.float64(0.6585024135498255)}, 'confidence_intervals': {'95%': (np.float64(-0.4895399995694089), np.float64(1.4652530672062543)), '99%': (np.float64(-1.7666845477901258), np.float64(2.742397615426971))}, 'ranking_distribution': {0.8774032545663176: 1, 0.4955600671357955: 1, 0.09060627975315512: 1}, 'normality_test': None, 'ranking_spread': np.float64(0.7867969748131625)}
+2025-01-03 15:20:58,090 - __main__ - INFO - Stability Scores: {'Inter-industry Heat Exchange': np.float64(1.0), 'Integration with DH Network': np.float64(1.0), 'Individual Solutions': np.float64(1.0)}
+2025-01-03 15:20:58,091 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Economic Synergy': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Energy Efficiency': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'External Dependence': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Ease of Implementation': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:58,092 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.11533596291382785), 'avg_cv_score': np.float64(0.75), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:20:58,094 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:20:58,095 - __main__ - INFO - ==================================================
+2025-01-03 15:20:58,296 - __main__ - INFO - 
+Results for case4:
+2025-01-03 15:20:58,296 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:58,297 - __main__ - INFO - Consistency Ratio: 0.009
+2025-01-03 15:20:58,298 - __main__ - INFO - Ranking Spread: 1.000
+2025-01-03 15:20:58,379 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:58,389 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5), 'std': np.float64(0.5), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0), 'variance': np.float64(0.25), 'coefficient_of_variation': np.float64(1.0)}, 'confidence_intervals': {'95%': (np.float64(-5.853102368216048), np.float64(6.853102368216048)), '99%': (np.float64(-31.328370581436996), np.float64(32.328370581437))}, 'ranking_distribution': {1.0: 1, 0.0: 1}, 'normality_test': None, 'ranking_spread': np.float64(1.0)}
+2025-01-03 15:20:58,395 - __main__ - INFO - Stability Scores: {'DH Network Integration': np.float64(1.0), 'Process Steam Supply': np.float64(1.0)}
+2025-01-03 15:20:58,397 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Investment Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Operational Cost': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'CO2 Reduction': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Public Acceptance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Regulatory Compliance': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:58,398 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.038600209448880374), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 5}
+2025-01-03 15:20:58,403 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:20:58,411 - __main__ - INFO - ==================================================
+2025-01-03 15:20:58,677 - __main__ - INFO - 
+Results for case5:
+2025-01-03 15:20:58,677 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:58,677 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:20:58,678 - __main__ - INFO - Ranking Spread: 0.004
+2025-01-03 15:20:58,678 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:58,678 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5), 'std': np.float64(0.0021033655635481763), 'skewness': np.float64(0.0), 'kurtosis': np.float64(-2.0), 'variance': np.float64(4.424146693920337e-06), 'coefficient_of_variation': np.float64(0.0042067311270963526)}, 'confidence_intervals': {'95%': (np.float64(0.473274206513996), np.float64(0.526725793486004)), '99%': (np.float64(0.36610660275031115), np.float64(0.6338933972496889))}, 'ranking_distribution': {0.4978966344364518: 1, 0.5021033655635482: 1}, 'normality_test': None, 'ranking_spread': np.float64(0.0042067311270963526)}
+2025-01-03 15:20:58,678 - __main__ - INFO - Stability Scores: {'DH Expansion with Industrial Heat': np.float64(0.75), 'Individual Industry Solutions': np.float64(0.75)}
+2025-01-03 15:20:58,678 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Cost-Effectiveness': {'slope': np.float64(3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Contract Feasibility': {'slope': np.float64(3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Scalability': {'slope': np.float64(-3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}, 'Stakeholder Alignment': {'slope': np.float64(-3.0), 'r_squared': np.float64(0.9000000000000001), 'p_value': np.float64(0.05131670194948612), 'std_error': np.float64(0.707106781186547)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:58,678 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.018548960754272925), 'avg_cv_score': np.float64(0.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:20:58,678 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:20:58,678 - __main__ - INFO - ==================================================
+2025-01-03 15:20:58,860 - __main__ - INFO - 
+Results for case6:
+2025-01-03 15:20:58,860 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:20:58,860 - __main__ - INFO - Consistency Ratio: 0.011
+2025-01-03 15:20:58,860 - __main__ - INFO - Ranking Spread: 0.724
+2025-01-03 15:20:58,861 - __main__ - INFO - 
+Statistical Analysis:
+2025-01-03 15:20:58,861 - __main__ - INFO - Ranking Analysis: {'basic_stats': {'mean': np.float64(0.5045767097960125), 'std': np.float64(0.29585072866222917), 'skewness': np.float64(0.07497120744662013), 'kurtosis': np.float64(-1.5000000000000002), 'variance': np.float64(0.08752765364997193), 'coefficient_of_variation': np.float64(0.5863344917006456)}, 'confidence_intervals': {'95%': (np.float64(-0.39552987886171065), np.float64(1.4046832984537359)), '99%': (np.float64(-1.5716811984670256), np.float64(2.5808346180590505))}, 'ranking_distribution': {0.4897651025235957: 1, 0.8740970570402673: 1, 0.1498679698241747: 1}, 'normality_test': None, 'ranking_spread': np.float64(0.7242290872160926)}
+2025-01-03 15:20:58,862 - __main__ - INFO - Stability Scores: {'Heat Pump Integration': np.float64(1.0), 'Process Heat Recovery': np.float64(1.0), 'External Heat Supply': np.float64(1.0)}
+2025-01-03 15:20:58,863 - __main__ - INFO - Sensitivity Meta-Analysis: {'weight_elasticity': {'Technical Feasibility': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Economic Viability': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Environmental Impact': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}, 'Implementation Time': {'slope': np.float64(0.0), 'r_squared': 0.0, 'p_value': np.float64(1.0), 'std_error': np.float64(0.0)}}, 'ranking_stability': {}, 'critical_thresholds': {}, 'interaction_effects': {}}
+2025-01-03 15:20:58,864 - __main__ - INFO - Cross-validation Results: {'avg_stability': np.float64(nan), 'avg_sensitivity': np.float64(0.06627200860160659), 'avg_cv_score': np.float64(1.0), 'n_splits_used': 2, 'n_criteria': 4}
+2025-01-03 15:20:58,865 - __main__ - INFO - 
+
+Comparative Analysis
+2025-01-03 15:20:58,866 - __main__ - INFO - ==================================================
+2025-01-03 15:20:58,866 - __main__ - INFO - 
+Consistency Ratio Comparison:
+2025-01-03 15:20:58,867 - __main__ - INFO - case5: 0.004
+2025-01-03 15:20:58,868 - __main__ - INFO - case3: 0.004
+2025-01-03 15:20:58,869 - __main__ - INFO - case4: 0.009
+2025-01-03 15:20:58,869 - __main__ - INFO - case6: 0.011
+2025-01-03 15:20:58,870 - __main__ - INFO - case2: 0.018
+2025-01-03 15:20:58,871 - __main__ - INFO - case1: 0.020
+2025-01-03 15:20:58,872 - __main__ - INFO - 
+Ranking Spread Comparison:
+2025-01-03 15:20:58,873 - __main__ - INFO - case4: 1.000
+2025-01-03 15:20:58,873 - __main__ - INFO - case3: 0.787
+2025-01-03 15:20:58,874 - __main__ - INFO - case6: 0.724
+2025-01-03 15:20:58,875 - __main__ - INFO - case1: 0.621
+2025-01-03 15:20:58,876 - __main__ - INFO - case2: 0.283
+2025-01-03 15:20:58,877 - __main__ - INFO - case5: 0.004
+2025-01-03 15:35:38,013 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:35:38,013 - __main__ - INFO - ==================================================
+2025-01-03 15:35:38,015 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:35:38,015 - __main__ - INFO - ==================================================
+2025-01-03 15:35:38,016 - __main__ - ERROR - Error analyzing case case1: MethodSensitivityAnalysis() takes no arguments
+2025-01-03 15:35:38,017 - __main__ - ERROR - Error in main execution: MethodSensitivityAnalysis() takes no arguments
+2025-01-03 15:36:46,849 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:36:46,849 - __main__ - INFO - ==================================================
+2025-01-03 15:36:46,851 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:36:46,851 - __main__ - INFO - ==================================================
+2025-01-03 15:36:46,877 - __main__ - ERROR - Error analyzing case case1: 'MethodSensitivityAnalysis' object has no attribute 'cross_method_analysis'
+2025-01-03 15:36:46,877 - __main__ - ERROR - Error in main execution: 'MethodSensitivityAnalysis' object has no attribute 'cross_method_analysis'
+2025-01-03 15:38:01,046 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:38:01,046 - __main__ - INFO - ==================================================
+2025-01-03 15:38:01,048 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:38:01,048 - __main__ - INFO - ==================================================
+2025-01-03 15:38:01,069 - __main__ - ERROR - Error analyzing case case1: 'MethodSensitivityAnalysis' object has no attribute 'rank_reversal_analysis'
+2025-01-03 15:38:01,069 - __main__ - ERROR - Error in main execution: 'MethodSensitivityAnalysis' object has no attribute 'rank_reversal_analysis'
+2025-01-03 15:39:10,913 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:39:10,913 - __main__ - INFO - ==================================================
+2025-01-03 15:39:10,913 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:39:10,914 - __main__ - INFO - ==================================================
+2025-01-03 15:39:11,124 - __main__ - ERROR - Error analyzing case case1: string indices must be integers, not 'str'
+2025-01-03 15:39:11,125 - __main__ - ERROR - Error in main execution: string indices must be integers, not 'str'
+2025-01-03 15:40:09,599 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:40:09,600 - __main__ - INFO - ==================================================
+2025-01-03 15:40:09,600 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:40:09,602 - __main__ - INFO - ==================================================
+2025-01-03 15:40:10,801 - __main__ - ERROR - Error analyzing case case1: 'statistic'
+2025-01-03 15:40:10,801 - __main__ - ERROR - Error in main execution: 'statistic'
+2025-01-03 15:41:23,014 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:41:23,014 - __main__ - INFO - ==================================================
+2025-01-03 15:41:23,015 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:41:23,015 - __main__ - INFO - ==================================================
+2025-01-03 15:41:24,210 - __main__ - ERROR - Error analyzing case case1: 'statistic'
+2025-01-03 15:41:24,210 - __main__ - ERROR - Error in main execution: 'statistic'
+2025-01-03 15:42:22,601 - __main__ - INFO - Starting Multi-Method MCDM Analysis
+2025-01-03 15:42:22,601 - __main__ - INFO - ==================================================
+2025-01-03 15:42:22,602 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:42:22,603 - __main__ - INFO - ==================================================
+2025-01-03 15:42:23,987 - __main__ - INFO - 
+Results for case1:
+2025-01-03 15:42:23,988 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:23,988 - __main__ - INFO - Consistency Ratio: 0.020
+2025-01-03 15:42:23,988 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:23,990 - __main__ - INFO - TOPSIS: [0.75698165 0.75579669 0.69695087]
+2025-01-03 15:42:23,990 - __main__ - INFO - WSM: [0.93033336 0.87391141 0.74449709]
+2025-01-03 15:42:23,991 - __main__ - INFO - WPM: [0. 0. 0.]
+2025-01-03 15:42:23,993 - __main__ - INFO - VIKOR: [1.         0.61645078 0.        ]
+2025-01-03 15:42:23,993 - __main__ - INFO - PROMETHEE: [1.         0.68717472 0.        ]
+2025-01-03 15:42:23,994 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:23,995 - __main__ - INFO - Friedman Test: {'statistic': np.float64(6.18181818181818), 'p_value': np.float64(0.18597521367937048)}
+2025-01-03 15:42:23,996 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:23,997 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(6.069264069264071), 'p_value': np.float64(0.19403495990301903)}
+2025-01-03 15:42:23,998 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:23,998 - __main__ - INFO - Frequency: {'topsis': 1, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:23,999 - __main__ - INFO - Average Severity: {'topsis': np.float64(0.0011849593751415144), 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:24,001 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.375), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:42:24,002 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:42:24,003 - __main__ - INFO - ==================================================
+2025-01-03 15:42:25,309 - __main__ - INFO - 
+Results for case2:
+2025-01-03 15:42:25,310 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:25,311 - __main__ - INFO - Consistency Ratio: 0.018
+2025-01-03 15:42:25,312 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:25,312 - __main__ - INFO - TOPSIS: [0.78677937 0.75404784 0.79319796]
+2025-01-03 15:42:25,313 - __main__ - INFO - WSM: [0.80138062 0.76343565 0.86730964]
+2025-01-03 15:42:25,314 - __main__ - INFO - WPM: [0.76350209 0.71074327 0.80515837]
+2025-01-03 15:42:25,315 - __main__ - INFO - VIKOR: [0.63916278 0.         1.        ]
+2025-01-03 15:42:25,316 - __main__ - INFO - PROMETHEE: [0.41286283 0.         1.        ]
+2025-01-03 15:42:25,316 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:25,317 - __main__ - INFO - Friedman Test: {'statistic': np.float64(3.0344827586206864), 'p_value': np.float64(0.552071469061507)}
+2025-01-03 15:42:25,318 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:25,319 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.5388291517323827), 'p_value': np.float64(0.8197418280919406)}
+2025-01-03 15:42:25,320 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:25,320 - __main__ - INFO - Frequency: {'topsis': 2, 'wsm': 2, 'wpm': 2, 'vikor': 2, 'promethee': 2}
+2025-01-03 15:42:25,321 - __main__ - INFO - Average Severity: {'topsis': np.float64(0.03594082443732988), 'wsm': np.float64(0.0709094798258515), 'wpm': np.float64(0.07358695780811636), 'vikor': np.float64(0.8195813920909341), 'promethee': np.float64(0.7064314168951926)}
+2025-01-03 15:42:25,322 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.25), 'wsm': np.float64(0.25), 'wpm': np.float64(0.25), 'vikor': np.float64(0.25), 'promethee': np.float64(0.25)}
+2025-01-03 15:42:25,323 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:42:25,324 - __main__ - INFO - ==================================================
+2025-01-03 15:42:26,686 - __main__ - INFO - 
+Results for case3:
+2025-01-03 15:42:26,687 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:26,687 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:42:26,688 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:26,689 - __main__ - INFO - TOPSIS: [0.95677385 0.82392362 0.67890177]
+2025-01-03 15:42:26,689 - __main__ - INFO - WSM: [0.9327712  0.82822332 0.59550355]
+2025-01-03 15:42:26,691 - __main__ - INFO - WPM: [0.81526715 0.71199392 0.50218838]
+2025-01-03 15:42:26,692 - __main__ - INFO - VIKOR: [1.         0.61423725 0.        ]
+2025-01-03 15:42:26,693 - __main__ - INFO - PROMETHEE: [1.         0.68879704 0.        ]
+2025-01-03 15:42:26,694 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:26,695 - __main__ - INFO - Friedman Test: {'statistic': np.float64(3.0344827586206864), 'p_value': np.float64(0.552071469061507)}
+2025-01-03 15:42:26,696 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:26,697 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.003584229390681), 'p_value': np.float64(0.9092520171919751)}
+2025-01-03 15:42:26,699 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:26,699 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:26,700 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:26,701 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.625), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:42:26,702 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:42:26,703 - __main__ - INFO - ==================================================
+2025-01-03 15:42:28,099 - __main__ - INFO - 
+Results for case4:
+2025-01-03 15:42:28,100 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:28,100 - __main__ - INFO - Consistency Ratio: 0.009
+2025-01-03 15:42:28,101 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:28,102 - __main__ - INFO - TOPSIS: [0.78964662 0.74330694]
+2025-01-03 15:42:28,104 - __main__ - INFO - WSM: [1.        0.8466453]
+2025-01-03 15:42:28,105 - __main__ - INFO - WPM: [0.99420925 0.82983231]
+2025-01-03 15:42:28,106 - __main__ - INFO - VIKOR: [nan nan]
+2025-01-03 15:42:28,107 - __main__ - INFO - PROMETHEE: [1. 0.]
+2025-01-03 15:42:28,108 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:28,108 - __main__ - INFO - Friedman Test: {'statistic': np.float64(nan), 'p_value': np.float64(nan)}
+2025-01-03 15:42:28,110 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:28,110 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(nan), 'p_value': np.float64(nan)}
+2025-01-03 15:42:28,111 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:28,112 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:28,112 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:28,113 - __main__ - INFO - Stability Scores: {'topsis': np.float64(1.0), 'wsm': np.float64(1.0), 'wpm': np.float64(1.0), 'vikor': np.float64(1.0), 'promethee': np.float64(1.0)}
+2025-01-03 15:42:28,114 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:42:28,115 - __main__ - INFO - ==================================================
+2025-01-03 15:42:29,415 - __main__ - INFO - 
+Results for case5:
+2025-01-03 15:42:29,415 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:29,416 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:42:29,417 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:29,418 - __main__ - INFO - TOPSIS: [0.91634895 0.91992584]
+2025-01-03 15:42:29,419 - __main__ - INFO - WSM: [0.88266353 0.8924475 ]
+2025-01-03 15:42:29,419 - __main__ - INFO - WPM: [0.79828555 0.79922311]
+2025-01-03 15:42:29,420 - __main__ - INFO - VIKOR: [0. 1.]
+2025-01-03 15:42:29,421 - __main__ - INFO - PROMETHEE: [0. 1.]
+2025-01-03 15:42:29,422 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:29,422 - __main__ - INFO - Friedman Test: {'statistic': np.float64(1.6842105263157912), 'p_value': np.float64(0.7935837648373804)}
+2025-01-03 15:42:29,423 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:29,424 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.7668711656441687), 'p_value': np.float64(0.7785375648285942)}
+2025-01-03 15:42:29,425 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:29,425 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:29,426 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:29,426 - __main__ - INFO - Stability Scores: {'topsis': np.float64(1.0), 'wsm': np.float64(1.0), 'wpm': np.float64(1.0), 'vikor': np.float64(1.0), 'promethee': np.float64(1.0)}
+2025-01-03 15:42:29,427 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:42:29,428 - __main__ - INFO - ==================================================
+2025-01-03 15:42:30,806 - __main__ - INFO - 
+Results for case6:
+2025-01-03 15:42:30,807 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:42:30,808 - __main__ - INFO - Consistency Ratio: 0.011
+2025-01-03 15:42:30,809 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:42:30,811 - __main__ - INFO - TOPSIS: [0.82822725 0.84655639 0.78252721]
+2025-01-03 15:42:30,811 - __main__ - INFO - WSM: [0.87545567 0.96857883 0.77379574]
+2025-01-03 15:42:30,812 - __main__ - INFO - WPM: [0.8113759  0.89867683 0.71286346]
+2025-01-03 15:42:30,813 - __main__ - INFO - VIKOR: [0.36853964 1.         0.        ]
+2025-01-03 15:42:30,815 - __main__ - INFO - PROMETHEE: [0.51563142 1.         0.        ]
+2025-01-03 15:42:30,816 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:42:30,817 - __main__ - INFO - Friedman Test: {'statistic': np.float64(2.2068965517241375), 'p_value': np.float64(0.6977668612560526)}
+2025-01-03 15:42:30,818 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:42:30,819 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.371565113500605), 'p_value': np.float64(0.8491217700057232)}
+2025-01-03 15:42:30,820 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:42:30,821 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:30,822 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:42:30,822 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.625), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:42:30,823 - __main__ - INFO - 
+Cross-Case Method Comparison
+2025-01-03 15:42:30,824 - __main__ - INFO - ==================================================
+2025-01-03 15:42:30,825 - __main__ - INFO - 
+case1 Method Agreement:
+2025-01-03 15:42:30,827 - __main__ - INFO - Average method correlation: nan
+2025-01-03 15:42:30,828 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,829 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,830 - __main__ - INFO - WPM stability score: 1.000
+2025-01-03 15:42:30,831 - __main__ - INFO - VIKOR stability score: 0.000
+2025-01-03 15:42:30,832 - __main__ - INFO - PROMETHEE stability score: 0.000
+2025-01-03 15:42:30,833 - __main__ - INFO - 
+case2 Method Agreement:
+2025-01-03 15:42:30,834 - __main__ - INFO - Average method correlation: 1.000
+2025-01-03 15:42:30,835 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,836 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,837 - __main__ - INFO - WPM stability score: 0.000
+2025-01-03 15:42:30,838 - __main__ - INFO - VIKOR stability score: 0.000
+2025-01-03 15:42:30,839 - __main__ - INFO - PROMETHEE stability score: 0.000
+2025-01-03 15:42:30,840 - __main__ - INFO - 
+case3 Method Agreement:
+2025-01-03 15:42:30,841 - __main__ - INFO - Average method correlation: 1.000
+2025-01-03 15:42:30,842 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,843 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,844 - __main__ - INFO - WPM stability score: 0.000
+2025-01-03 15:42:30,846 - __main__ - INFO - VIKOR stability score: 0.000
+2025-01-03 15:42:30,847 - __main__ - INFO - PROMETHEE stability score: 0.000
+2025-01-03 15:42:30,848 - __main__ - INFO - 
+case4 Method Agreement:
+2025-01-03 15:42:30,849 - __main__ - INFO - Average method correlation: nan
+2025-01-03 15:42:30,850 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,851 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,852 - __main__ - INFO - WPM stability score: 0.000
+2025-01-03 15:42:30,853 - __main__ - INFO - VIKOR stability score: 0.000
+2025-01-03 15:42:30,854 - __main__ - INFO - PROMETHEE stability score: 1.000
+2025-01-03 15:42:30,855 - __main__ - INFO - 
+case5 Method Agreement:
+2025-01-03 15:42:30,855 - __main__ - INFO - Average method correlation: 1.000
+2025-01-03 15:42:30,856 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,857 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,859 - __main__ - INFO - WPM stability score: 0.000
+2025-01-03 15:42:30,860 - __main__ - INFO - VIKOR stability score: 1.000
+2025-01-03 15:42:30,861 - __main__ - INFO - PROMETHEE stability score: 1.000
+2025-01-03 15:42:30,862 - __main__ - INFO - 
+case6 Method Agreement:
+2025-01-03 15:42:30,863 - __main__ - INFO - Average method correlation: 1.000
+2025-01-03 15:42:30,864 - __main__ - INFO - TOPSIS stability score: 0.000
+2025-01-03 15:42:30,865 - __main__ - INFO - WSM stability score: 0.000
+2025-01-03 15:42:30,866 - __main__ - INFO - WPM stability score: 0.000
+2025-01-03 15:42:30,867 - __main__ - INFO - VIKOR stability score: 0.000
+2025-01-03 15:42:30,869 - __main__ - INFO - PROMETHEE stability score: 0.000
+2025-01-03 15:53:10,489 - __main__ - INFO - Starting MCDM Analysis
+2025-01-03 15:53:10,489 - __main__ - INFO - ==================================================
+2025-01-03 15:53:10,490 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:53:10,491 - __main__ - INFO - ==================================================
+2025-01-03 15:53:11,875 - __main__ - INFO - 
+Results for case1:
+2025-01-03 15:53:11,876 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:11,877 - __main__ - INFO - Consistency Ratio: 0.020
+2025-01-03 15:53:11,877 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:11,878 - __main__ - INFO - TOPSIS: [0.75698165 0.75579669 0.69695087]
+2025-01-03 15:53:11,879 - __main__ - INFO - WSM: [0.93033336 0.87391141 0.74449709]
+2025-01-03 15:53:11,880 - __main__ - INFO - WPM: [0. 0. 0.]
+2025-01-03 15:53:11,880 - __main__ - INFO - VIKOR: [1.         0.61645078 0.        ]
+2025-01-03 15:53:11,881 - __main__ - INFO - PROMETHEE: [1.         0.68717472 0.        ]
+2025-01-03 15:53:11,882 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:11,883 - __main__ - INFO - Friedman Test: {'statistic': np.float64(6.18181818181818), 'p_value': np.float64(0.18597521367937048)}
+2025-01-03 15:53:11,884 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:11,884 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(6.069264069264071), 'p_value': np.float64(0.19403495990301903)}
+2025-01-03 15:53:11,885 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:11,886 - __main__ - INFO - Frequency: {'topsis': 1, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:11,886 - __main__ - INFO - Average Severity: {'topsis': np.float64(0.0011849593751415144), 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:11,887 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.375), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:53:11,888 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:53:11,889 - __main__ - INFO - ==================================================
+2025-01-03 15:53:13,199 - __main__ - INFO - 
+Results for case2:
+2025-01-03 15:53:13,200 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:13,201 - __main__ - INFO - Consistency Ratio: 0.018
+2025-01-03 15:53:13,202 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:13,202 - __main__ - INFO - TOPSIS: [0.78677937 0.75404784 0.79319796]
+2025-01-03 15:53:13,203 - __main__ - INFO - WSM: [0.80138062 0.76343565 0.86730964]
+2025-01-03 15:53:13,204 - __main__ - INFO - WPM: [0.76350209 0.71074327 0.80515837]
+2025-01-03 15:53:13,205 - __main__ - INFO - VIKOR: [0.63916278 0.         1.        ]
+2025-01-03 15:53:13,206 - __main__ - INFO - PROMETHEE: [0.41286283 0.         1.        ]
+2025-01-03 15:53:13,207 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:13,208 - __main__ - INFO - Friedman Test: {'statistic': np.float64(3.0344827586206864), 'p_value': np.float64(0.552071469061507)}
+2025-01-03 15:53:13,210 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:13,212 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.5388291517323827), 'p_value': np.float64(0.8197418280919406)}
+2025-01-03 15:53:13,213 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:13,213 - __main__ - INFO - Frequency: {'topsis': 2, 'wsm': 2, 'wpm': 2, 'vikor': 2, 'promethee': 2}
+2025-01-03 15:53:13,214 - __main__ - INFO - Average Severity: {'topsis': np.float64(0.03594082443732988), 'wsm': np.float64(0.0709094798258515), 'wpm': np.float64(0.07358695780811636), 'vikor': np.float64(0.8195813920909341), 'promethee': np.float64(0.7064314168951926)}
+2025-01-03 15:53:13,216 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.25), 'wsm': np.float64(0.25), 'wpm': np.float64(0.25), 'vikor': np.float64(0.25), 'promethee': np.float64(0.25)}
+2025-01-03 15:53:13,217 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:53:13,222 - __main__ - INFO - ==================================================
+2025-01-03 15:53:14,578 - __main__ - INFO - 
+Results for case3:
+2025-01-03 15:53:14,578 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:14,579 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:53:14,579 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:14,580 - __main__ - INFO - TOPSIS: [0.95677385 0.82392362 0.67890177]
+2025-01-03 15:53:14,581 - __main__ - INFO - WSM: [0.9327712  0.82822332 0.59550355]
+2025-01-03 15:53:14,582 - __main__ - INFO - WPM: [0.81526715 0.71199392 0.50218838]
+2025-01-03 15:53:14,582 - __main__ - INFO - VIKOR: [1.         0.61423725 0.        ]
+2025-01-03 15:53:14,583 - __main__ - INFO - PROMETHEE: [1.         0.68879704 0.        ]
+2025-01-03 15:53:14,584 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:14,584 - __main__ - INFO - Friedman Test: {'statistic': np.float64(3.0344827586206864), 'p_value': np.float64(0.552071469061507)}
+2025-01-03 15:53:14,585 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:14,586 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.003584229390681), 'p_value': np.float64(0.9092520171919751)}
+2025-01-03 15:53:14,587 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:14,588 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:14,589 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:14,589 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.625), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:53:14,590 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:53:14,591 - __main__ - INFO - ==================================================
+2025-01-03 15:53:15,996 - __main__ - INFO - 
+Results for case4:
+2025-01-03 15:53:15,997 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:15,997 - __main__ - INFO - Consistency Ratio: 0.009
+2025-01-03 15:53:15,997 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:15,998 - __main__ - INFO - TOPSIS: [0.78964662 0.74330694]
+2025-01-03 15:53:15,999 - __main__ - INFO - WSM: [1.        0.8466453]
+2025-01-03 15:53:16,000 - __main__ - INFO - WPM: [0.99420925 0.82983231]
+2025-01-03 15:53:16,001 - __main__ - INFO - VIKOR: [nan nan]
+2025-01-03 15:53:16,002 - __main__ - INFO - PROMETHEE: [1. 0.]
+2025-01-03 15:53:16,003 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:16,004 - __main__ - INFO - Friedman Test: {'statistic': np.float64(nan), 'p_value': np.float64(nan)}
+2025-01-03 15:53:16,005 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:16,006 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(nan), 'p_value': np.float64(nan)}
+2025-01-03 15:53:16,007 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:16,007 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:16,008 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:16,009 - __main__ - INFO - Stability Scores: {'topsis': np.float64(1.0), 'wsm': np.float64(1.0), 'wpm': np.float64(1.0), 'vikor': np.float64(1.0), 'promethee': np.float64(1.0)}
+2025-01-03 15:53:16,010 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:53:16,010 - __main__ - INFO - ==================================================
+2025-01-03 15:53:17,310 - __main__ - INFO - 
+Results for case5:
+2025-01-03 15:53:17,311 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:17,312 - __main__ - INFO - Consistency Ratio: 0.004
+2025-01-03 15:53:17,313 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:17,313 - __main__ - INFO - TOPSIS: [0.91634895 0.91992584]
+2025-01-03 15:53:17,313 - __main__ - INFO - WSM: [0.88266353 0.8924475 ]
+2025-01-03 15:53:17,313 - __main__ - INFO - WPM: [0.79828555 0.79922311]
+2025-01-03 15:53:17,313 - __main__ - INFO - VIKOR: [0. 1.]
+2025-01-03 15:53:17,314 - __main__ - INFO - PROMETHEE: [0. 1.]
+2025-01-03 15:53:17,314 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:17,314 - __main__ - INFO - Friedman Test: {'statistic': np.float64(1.6842105263157912), 'p_value': np.float64(0.7935837648373804)}
+2025-01-03 15:53:17,314 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:17,314 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.7668711656441687), 'p_value': np.float64(0.7785375648285942)}
+2025-01-03 15:53:17,314 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:17,314 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:17,314 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:17,314 - __main__ - INFO - Stability Scores: {'topsis': np.float64(1.0), 'wsm': np.float64(1.0), 'wpm': np.float64(1.0), 'vikor': np.float64(1.0), 'promethee': np.float64(1.0)}
+2025-01-03 15:53:17,314 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:53:17,314 - __main__ - INFO - ==================================================
+2025-01-03 15:53:18,699 - __main__ - INFO - 
+Results for case6:
+2025-01-03 15:53:18,699 - __main__ - INFO - --------------------------------------------------
+2025-01-03 15:53:18,700 - __main__ - INFO - Consistency Ratio: 0.011
+2025-01-03 15:53:18,701 - __main__ - INFO - 
+Rankings by Method:
+2025-01-03 15:53:18,702 - __main__ - INFO - TOPSIS: [0.82822725 0.84655639 0.78252721]
+2025-01-03 15:53:18,703 - __main__ - INFO - WSM: [0.87545567 0.96857883 0.77379574]
+2025-01-03 15:53:18,703 - __main__ - INFO - WPM: [0.8113759  0.89867683 0.71286346]
+2025-01-03 15:53:18,704 - __main__ - INFO - VIKOR: [0.36853964 1.         0.        ]
+2025-01-03 15:53:18,705 - __main__ - INFO - PROMETHEE: [0.51563142 1.         0.        ]
+2025-01-03 15:53:18,706 - __main__ - INFO - 
+Statistical Test Results:
+2025-01-03 15:53:18,707 - __main__ - INFO - Friedman Test: {'statistic': np.float64(2.2068965517241375), 'p_value': np.float64(0.6977668612560526)}
+2025-01-03 15:53:18,707 - __main__ - INFO - Kendall's W: {'w': np.float64(1.0)}
+2025-01-03 15:53:18,708 - __main__ - INFO - Kruskal-Wallis: {'statistic': np.float64(1.371565113500605), 'p_value': np.float64(0.8491217700057232)}
+2025-01-03 15:53:18,709 - __main__ - INFO - 
+Rank Reversal Analysis:
+2025-01-03 15:53:18,710 - __main__ - INFO - Frequency: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:18,711 - __main__ - INFO - Average Severity: {'topsis': 0, 'wsm': 0, 'wpm': 0, 'vikor': 0, 'promethee': 0}
+2025-01-03 15:53:18,711 - __main__ - INFO - Stability Scores: {'topsis': np.float64(0.625), 'wsm': np.float64(0.625), 'wpm': np.float64(0.625), 'vikor': np.float64(0.625), 'promethee': np.float64(0.625)}
+2025-01-03 15:53:18,712 - __main__ - ERROR - Error in main execution: 'case_data'
+2025-01-03 15:54:21,512 - __main__ - INFO - Starting MCDM Analysis
+2025-01-03 15:54:21,512 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,512 - __main__ - INFO - 
+Analyzing case1
+2025-01-03 15:54:21,513 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,544 - __main__ - INFO - 
+Analyzing case2
+2025-01-03 15:54:21,544 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,581 - __main__ - INFO - 
+Analyzing case3
+2025-01-03 15:54:21,581 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,618 - __main__ - INFO - 
+Analyzing case4
+2025-01-03 15:54:21,618 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,646 - __main__ - INFO - 
+Analyzing case5
+2025-01-03 15:54:21,646 - __main__ - INFO - ==================================================
+2025-01-03 15:54:21,681 - __main__ - INFO - 
+Analyzing case6
+2025-01-03 15:54:21,681 - __main__ - INFO - ==================================================
