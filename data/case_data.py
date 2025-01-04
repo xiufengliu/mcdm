@@ -1,19 +1,19 @@
 CASE_DATA = {
     "case1": {
         "name": "Cement Production",
-        "options": ["Internal Heat Recovery", "Alternative Fuel Drying", "District Heating"],
+        "options": ["Internal Process Heat Recovery", "Alternative Fuel Drying", "District Heating"],
         "criteria": ["Investment Cost", "Operational Cost", "CO2 Reduction", "Social Acceptance"],
         "criteria_type": ["min", "min", "max", "max"],
         "comparison_matrix": [
-            [1, 2, 1/5, 3],
-            [1/2, 1, 1/7, 1],
-            [5, 7, 1, 7],
-            [1/3, 1, 1/7, 1]
+            [1, 2, 1/7, 3],
+            [1/2, 1, 1/9, 2],
+            [7, 9, 1, 5],
+            [1/3, 1/2, 1/5, 1]
         ],
         "decision_matrix": [
-            [7, 5, 8, 6],
-            [5, 6, 7, 5],
-            [8, 7, 6, 8]
+            [0.757, 0.930, 0.000, 1.000],
+            [0.756, 0.874, 0.000, 0.616],
+            [0.697, 0.744, 0.000, 0.000]
         ]
     },
     "case2": {
@@ -28,21 +28,21 @@ CASE_DATA = {
             [1/3, 1, 1/2, 1]
         ],
         "decision_matrix": [
-            [0.75, 0.80, 0.65, 0.70],
-            [0.60, 0.60, 0.85, 0.50],
-            [0.90, 0.95, 0.50, 0.90]
+            [0.787, 0.801, 0.764, 0.639],
+            [0.754, 0.763, 0.711, 0.000],
+            [0.793, 0.867, 0.805, 1.000]
         ]
     },
     "case3": {
         "name": "Industrial Park",
         "options": ["Inter-industry Heat Exchange", "Integration with DH Network", "Individual Solutions"],
-        "criteria": ["Economic Synergy", "Energy Efficiency", "External Dependence", "Ease of Implementation"],
+        "criteria": ["Economic Synergy", "Energy Efficiency", "External Energy Dependence", "Ease of Implementation"],
         "criteria_type": ["max", "max", "max", "max"],
         "comparison_matrix": [
-            [1, 2, 2, 3],
-            [1/2, 1, 1, 2],
-            [1/2, 1, 1, 2],
-            [1/3, 1/2, 1/2, 1]
+            [1, 3, 2, 1/2],
+            [1/3, 1, 2, 1/3],
+            [1/2, 1/2, 1, 1/5],
+            [2, 3, 5, 1]
         ],
         "decision_matrix": [
             [0.90, 0.75, 0.80, 0.70],
@@ -84,20 +84,19 @@ CASE_DATA = {
         ]
     },
     "case6": {
-        "name": "Food Processing Industry",
-        "options": ["Heat Pump Integration", "Process Heat Recovery", "External Heat Supply"],
-        "criteria": ["Technical Feasibility", "Economic Viability", "Environmental Impact", "Implementation Time"],
-        "criteria_type": ["max", "max", "max", "min"],
+        "name": "Residential DH with P2P",
+        "options": ["P2P with CHP Integration", "DH without CHP"],
+        "criteria": ["Consumer Benefits", "Grid Dependence", "Community Engagement", "Platform Adaptability"],
+        "criteria_type": ["max", "min", "max", "max"],
         "comparison_matrix": [
-            [1, 1/2, 2, 3],
-            [2, 1, 3, 4],
-            [1/2, 1/3, 1, 2],
-            [1/3, 1/4, 1/2, 1]
+            [1, 2, 3, 2],
+            [1/2, 1, 2, 1],
+            [1/3, 1/2, 1, 1/2],
+            [1/2, 1, 2, 1]
         ],
         "decision_matrix": [
-            [0.85, 0.70, 0.75, 0.60],
-            [0.90, 0.85, 0.80, 0.70],
-            [0.60, 0.65, 0.90, 0.80]
+            [0.80, 0.75, 0.85, 0.90],
+            [0.60, 0.60, 0.70, 0.75]
         ]
     }
 }

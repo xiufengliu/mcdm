@@ -10,6 +10,7 @@ import warnings
 from src.mcdm_methods import MCDMethods
 from src.method_sensitivity import MethodSensitivityAnalysis
 import seaborn as sns
+from data.case_data import CASE_DATA
 
 # Configure logging
 logging.basicConfig(
@@ -21,23 +22,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-# Add reference studies data
-REFERENCE_STUDIES = {
-    'Study1': {
-        'name': 'Industrial Heat Recovery (2019)',
-        'rankings': [0.82, 0.76, 0.65],
-        'weights': [0.35, 0.25, 0.25, 0.15],
-        'criteria': ['Economic', 'Technical', 'Environmental', 'Social']
-    },
-    'Study2': {
-        'name': 'Waste Heat Integration (2020)',
-        'rankings': [0.78, 0.72, 0.68],
-        'weights': [0.30, 0.30, 0.25, 0.15],
-        'criteria': ['Economic', 'Technical', 'Environmental', 'Social']
-    }
-    # Add more reference studies as needed
-}
 
 def analyze_case(case_id, visualizer):
     try:
@@ -123,61 +107,71 @@ def analyze_case(case_id, visualizer):
         logger.error(f"Error analyzing case {case_id}: {str(e)}")
         raise
 
-def format_results_for_publication(all_results):
-    """Format all results into LaTeX tables"""
+def format_results_for_publication(all_results, file=None):
+    """Format all results into LaTeX tables
+    Args:
+        all_results: Dictionary containing all analysis results
+        file: Optional file object to write results to. If None, prints to stdout
+    """
+    def write(text):
+        if file:
+            print(text, file=file)
+        else:
+            print(text)
+            
     # Table 1: Overview of Case Studies
-    print("\n%% Table 1: Overview of Case Studies and Consistency Analysis")
-    print(r"\begin{table}[htbp]")
-    print(r"\centering")
-    print(r"\caption{Overview of Case Studies and Consistency Analysis}")
-    print(r"\begin{tabular}{lccccl}")
-    print(r"\hline")
-    print(r"Case ID & Industry Sector & Alternatives & Criteria & CR & Decision Context \\")
-    print(r"\hline")
+    write("\n%% Table 1: Overview of Case Studies and Consistency Analysis")
+    write(r"\begin{table}[htbp]")
+    write(r"\centering")
+    write(r"\caption{Overview of Case Studies and Consistency Analysis}")
+    write(r"\begin{tabular}{lccccl}")
+    write(r"\hline")
+    write(r"Case ID & Industry Sector & Alternatives & Criteria & CR & Decision Context \\")
+    write(r"\hline")
     
     for case_id, results in all_results.items():
         case_data = results['case_data']
-        print(f"{case_id} & {case_data['sector']} & {len(case_data['alternatives'])} & "
+        write(f"{case_id} & {case_data['sector']} & {len(case_data['alternatives'])} & "
               f"{len(case_data['criteria'])} & {results['consistency_ratio']:.3f} & "
               f"{case_data['context']} \\\\")
     
-    print(r"\hline")
-    print(r"\end{tabular}")
-    print(r"\label{tab:overview}")
-    print(r"\end{table}")
+    write(r"\hline")
+    write(r"\end{tabular}")
+    write(r"\label{tab:overview}")
+    write(r"\end{table}")
     
     # Table 2: Method Comparison Results
-    print("\n%% Table 2: Method Comparison Results (Rankings)")
-    print(r"\begin{table}[htbp]")
-    print(r"\centering")
-    print(r"\caption{Method Comparison Results}")
-    print(r"\begin{tabular}{llccccc}")
-    print(r"\hline")
-    print(r"Case & Alternative & TOPSIS & WSM & WPM & VIKOR & PROMETHEE \\")
-    print(r"\hline")
+    write("\n%% Table 2: Method Comparison Results (Rankings)")
+    write(r"\begin{table}[htbp]")
+    write(r"\centering")
+    write(r"\caption{Method Comparison Results}")
+    write(r"\begin{tabular}{llccccc}")
+    write(r"\hline")
+    write(r"Case & Alternative & TOPSIS & WSM & WPM & VIKOR & PROMETHEE \\")
+    write(r"\hline")
     
     for case_id, results in all_results.items():
         rankings = results['rankings']
         alternatives = results['case_data']['alternatives']
         for i, alt in enumerate(alternatives):
-            print(f"{case_id} & {alt} & {rankings['TOPSIS'][i]:.3f} & "
+            write(f"{case_id} & {alt} & {rankings['TOPSIS'][i]:.3f} & "
                   f"{rankings['WSM'][i]:.3f} & {rankings['WPM'][i]:.3f} & "
                   f"{rankings['VIKOR'][i]:.3f} & {rankings['PROMETHEE'][i]:.3f} \\\\")
     
-    print(r"\hline")
-    print(r"\end{tabular}")
-    print(r"\label{tab:rankings}")
-    print(r"\end{table}")
+    write(r"\hline")
+    write(r"\end{tabular}")
+    write(r"\label{tab:rankings}")
+    write(r"\end{table}")
     
     # Table 3: Method Stability Analysis
-    print("\n%% Table 3: Method Stability Analysis")
-    print(r"\begin{table}[htbp]")
-    print(r"\centering")
-    print(r"\caption{Method Stability Analysis}")
-    print(r"\begin{tabular}{lccccc}")
-    print(r"\hline")
-    print(r"Method & Rank Reversals & Avg Severity & Stability Score & Mean Correlation \\")
-    print(r"\hline")
+    write("\n%% Table 3: Method Stability Analysis")
+    write(r"\begin{table}[htbp]")
+    write(r"\centering")
+    write(r"\caption{Method Stability Analysis}")
+    write(r"\begin{tabular}{lccccc}")
+    write(r"\hline")
+    write(r"Method & Rank Reversals & Avg Severity & Stability Score & Mean Correlation \\")
+    write(r"\hline")
     
     methods = ['TOPSIS', 'WSM', 'WPM', 'VIKOR', 'PROMETHEE']
     for method in methods:
@@ -190,22 +184,22 @@ def format_results_for_publication(all_results):
         correlation = np.mean([res['correlation_matrix'][methods.index(method)] 
                              for res in all_results.values()])
         
-        print(f"{method} & {reversals} & {severity:.3f} & {stability:.3f} & {correlation:.3f} \\\\")
+        write(f"{method} & {reversals} & {severity:.3f} & {stability:.3f} & {correlation:.3f} \\\\")
     
-    print(r"\hline")
-    print(r"\end{tabular}")
-    print(r"\label{tab:stability}")
-    print(r"\end{table}")
+    write(r"\hline")
+    write(r"\end{tabular}")
+    write(r"\label{tab:stability}")
+    write(r"\end{table}")
     
     # Table 4: Statistical Test Results
-    print("\n%% Table 4: Statistical Test Results")
-    print(r"\begin{table}[htbp]")
-    print(r"\centering")
-    print(r"\caption{Statistical Test Results}")
-    print(r"\begin{tabular}{lcccccc}")
-    print(r"\hline")
-    print(r"Test & Case 1 & Case 2 & Case 3 & Case 4 & Case 5 & Case 6 \\")
-    print(r"\hline")
+    write("\n%% Table 4: Statistical Test Results")
+    write(r"\begin{table}[htbp]")
+    write(r"\centering")
+    write(r"\caption{Statistical Test Results}")
+    write(r"\begin{tabular}{lcccccc}")
+    write(r"\hline")
+    write(r"Test & Case 1 & Case 2 & Case 3 & Case 4 & Case 5 & Case 6 \\")
+    write(r"\hline")
     
     tests = ['friedman_test', 'kendall_w', 'kruskal_wallis']
     test_names = ['Friedman p-value', "Kendall's W", 'Kruskal-Wallis p']
@@ -218,12 +212,12 @@ def format_results_for_publication(all_results):
             else:
                 val = all_results[case_id]['statistical_tests'][test]['p_value']
             values.append(f"{val:.3f}")
-        print(f"{name} & {' & '.join(values)} \\\\")
+        write(f"{name} & {' & '.join(values)} \\\\")
     
-    print(r"\hline")
-    print(r"\end{tabular}")
-    print(r"\label{tab:statistics}")
-    print(r"\end{table}")
+    write(r"\hline")
+    write(r"\end{tabular}")
+    write(r"\label{tab:statistics}")
+    write(r"\end{table}")
 
 def main():
     try:
@@ -240,13 +234,19 @@ def main():
             
             results = analyze_case(case_id, visualizer)
             all_results[case_id] = results
+            
+            # Log key results for verification
+            logger.info(f"Case {case_id} analysis complete:")
+            logger.info(f"- Consistency ratio: {results['consistency_ratio']:.3f}")
+            logger.info(f"- Number of alternatives: {len(results['rankings']['TOPSIS'])}")
         
-        # Format and output results for publication
-        format_results_for_publication(all_results)
-        
-        # Save all results to a file
-        with open('results/experimental_results.tex', 'w') as f:
-            format_results_for_publication(all_results)
+        # Save results to file only
+        output_file = 'results/experimental_results.tex'
+        logger.info(f"\nSaving results to {output_file}")
+        with open(output_file, 'w') as f:
+            format_results_for_publication(all_results, file=f)
+            
+        logger.info(f"Analysis complete. Results saved to {output_file}")
         
     except Exception as e:
         logger.error(f"Error in main execution: {str(e)}")

@@ -1,0 +1,81 @@
+
+%% Table 1: Overview of Case Studies and Consistency Analysis
+\begin{table}[htbp]
+\centering
+\caption{Overview of Case Studies and Consistency Analysis}
+\begin{tabular}{lccccl}
+\hline
+Case ID & Industry Sector & Alternatives & Criteria & CR & Decision Context \\
+\hline
+case1 & Cement & 3 & 4 & 0.095 & Heat Recovery \\
+case2 & Metal Casting & 3 & 4 & 0.018 & Process Design \\
+case3 & Industrial Park & 3 & 4 & 0.042 & Integration \\
+case4 & District Heat & 2 & 5 & 0.009 & Network Design \\
+case5 & Multi-DH & 2 & 4 & 0.004 & Cross-sector \\
+case6 & Food Process & 2 & 4 & 0.004 & Energy Efficiency \\
+\hline
+\end{tabular}
+\label{tab:overview}
+\end{table}
+
+%% Table 2: Method Comparison Results (Rankings)
+\begin{table}[htbp]
+\centering
+\caption{Method Comparison Results}
+\begin{tabular}{llccccc}
+\hline
+Case & Alternative & TOPSIS & WSM & WPM & VIKOR & PROMETHEE \\
+\hline
+case1 & A1 & nan & nan & 0.000 & nan & 1.000 \\
+case1 & A2 & nan & nan & 0.000 & nan & 0.512 \\
+case1 & A3 & nan & nan & 0.000 & nan & 0.000 \\
+case2 & A1 & 0.824 & 0.932 & 0.802 & 0.901 & 0.676 \\
+case2 & A2 & 0.786 & 0.816 & 0.000 & 0.000 & 0.000 \\
+case2 & A3 & 0.827 & 0.986 & 0.856 & 0.979 & 1.000 \\
+case3 & A1 & 0.938 & 0.912 & 0.769 & 1.000 & 1.000 \\
+case3 & A2 & 0.840 & 0.788 & 0.657 & 0.000 & 0.275 \\
+case3 & A3 & 0.822 & 0.752 & 0.599 & 0.599 & 0.000 \\
+case4 & A1 & 0.790 & 1.000 & 0.994 & nan & 1.000 \\
+case4 & A2 & 0.743 & 0.847 & 0.830 & nan & 0.000 \\
+case5 & A1 & 0.916 & 0.883 & 0.798 & 0.000 & 0.000 \\
+case5 & A2 & 0.920 & 0.892 & 0.799 & 1.000 & 1.000 \\
+case6 & A1 & 0.663 & 0.955 & 0.930 & 1.000 & 1.000 \\
+case6 & A2 & 0.646 & 0.835 & 0.811 & 0.000 & 0.000 \\
+\hline
+\end{tabular}
+\label{tab:rankings}
+\end{table}
+
+%% Table 3: Method Stability Analysis
+\begin{table}[htbp]
+\centering
+\caption{Method Stability Analysis}
+\begin{tabular}{lccccc}
+\hline
+Method & Rank Reversals & Avg Severity & Stability Score & Mean Correlation \\
+\hline
+TOPSIS & 3 & 0.009 & nan & nan \\
+WSM & 2 & 0.024 & nan & nan \\
+WPM & 2 & 0.138 & 0.996 & nan \\
+VIKOR & 3 & 0.256 & nan & nan \\
+PROMETHEE & 2 & 0.140 & 0.997 & nan \\
+\hline
+\end{tabular}
+\label{tab:stability}
+\end{table}
+
+%% Table 4: Statistical Test Results
+\begin{table}[htbp]
+\centering
+\caption{Statistical Test Results}
+\begin{tabular}{lcccccc}
+\hline
+Test & Case 1 & Case 2 & Case 3 & Case 4 & Case 5 & Case 6 \\
+\hline
+Friedman p-value & nan & 0.273 & 0.425 & nan & 0.794 & 0.794 \\
+Kendall's W & 0.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+Kruskal-Wallis p & nan & 0.690 & 0.539 & nan & 0.779 & 0.838 \\
+\hline
+\end{tabular}
+\label{tab:statistics}
+\end{table}
