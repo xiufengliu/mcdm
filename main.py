@@ -64,12 +64,40 @@ def analyze_case(case_id, visualizer):
         method_rankings['VIKOR'] = mcdm.vikor(decision_matrix, weights, criteria_type)
         method_rankings['PROMETHEE'] = mcdm.promethee(decision_matrix, weights, criteria_type)
         
+        # Generate and save figures
+        # Method comparison
+        fig = visualizer.plot_method_comparison(method_rankings, case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_method_comparison')
+        
+        # Weights visualization
+        fig = visualizer.plot_weights(case_data['criteria'], weights, case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_weights')
+        
         # Perform cross-method analysis
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             rankings, correlation_matrix = sensitivity.cross_method_analysis(
                 decision_matrix, weights, criteria_type
             )
+            
+        # Generate correlation plot
+        fig = visualizer.plot_correlation_matrix(decision_matrix, case_data['criteria'], case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_correlation')
+        
+        # Perform sensitivity analysis
+        sensitivity_data = {}
+        variations = np.arange(-0.2, 0.21, 0.05)  # -20% to +20% in 5% steps
+        for i, criterion in enumerate(case_data['criteria']):
+            for variation in variations:
+                modified_weights = weights.copy()
+                modified_weights[i] *= (1 + variation)
+                modified_weights /= modified_weights.sum()  # Renormalize
+                rankings = mcdm.topsis(decision_matrix, modified_weights, criteria_type)
+                sensitivity_data[(i, variation)] = rankings
+                
+        # Generate sensitivity plot
+        fig = visualizer.plot_sensitivity(sensitivity_data, case_data['criteria'], case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_sensitivity')
         
         # Perform method-specific sensitivity analysis
         method_stability = {}
@@ -83,13 +111,25 @@ def analyze_case(case_id, visualizer):
                 'stability_score': np.mean([1 - np.std(list(stability_results.values()), axis=0)])
             }
         
+        # Generate stability plot
+        fig = visualizer.plot_stability_analysis(method_stability, case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_stability')
+        
         # Statistical tests
         statistical_results = sensitivity.statistical_tests(method_rankings)
+        
+        # Generate statistical tests plot
+        fig = visualizer.plot_statistical_tests(statistical_results, case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_statistical_tests')
         
         # Detailed rank reversal analysis
         reversal_results = sensitivity.detailed_rank_reversal(
             decision_matrix, weights, criteria_type
         )
+        
+        # Generate rank reversals plot
+        fig = visualizer.plot_rank_reversals(reversal_results, case_id)
+        visualizer.save_figure(fig, f'results/{case_id}_rank_reversals')
         
         # Return comprehensive results
         return {
@@ -100,7 +140,8 @@ def analyze_case(case_id, visualizer):
             'statistical_tests': statistical_results,
             'detailed_reversals': reversal_results,
             'weights': weights,
-            'consistency_ratio': cr
+            'consistency_ratio': cr,
+            'sensitivity_data': sensitivity_data
         }
         
     except Exception as e:
