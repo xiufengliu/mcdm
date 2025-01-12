@@ -45,7 +45,7 @@ def analyze_case(case_id, visualizer):
                 'case6': 'Food Process'
             }[case_id],
             'alternatives': [f'A{i+1}' for i in range(len(decision_matrix))],
-            'criteria': [f'C{i+1}' for i in range(len(weights))],
+            'criteria': case.data['criteria'],
             'context': {
                 'case1': 'Heat Recovery',
                 'case2': 'Process Design',
@@ -68,6 +68,10 @@ def analyze_case(case_id, visualizer):
         # Method comparison
         fig = visualizer.plot_method_comparison(method_rankings, case_id)
         visualizer.save_figure(fig, f'results/{case_id}_method_comparison')
+        
+        # Cross-method correlation
+        fig = visualizer.plot_cross_method_correlation(method_rankings)
+        visualizer.save_figure(fig, f'results/{case_id}_cross_method_correlation')
         
         # Weights visualization
         fig = visualizer.plot_weights(case_data['criteria'], weights, case_id)
@@ -259,6 +263,37 @@ def format_results_for_publication(all_results, file=None):
     write(r"\end{tabular}")
     write(r"\label{tab:statistics}")
     write(r"\end{table}")
+    
+    # Add new Table 5: Criteria Weights for All Cases
+    write("\n%% Table 5: Criteria Weights Analysis")
+    write(r"\begin{table}[htbp]")
+    write(r"\centering")
+    write(r"\caption{Criteria Weights Analysis for All Cases}")
+    write(r"\begin{tabular}{llc}")
+    write(r"\hline")
+    write(r"Case & Criteria & Weight \\")
+    write(r"\hline")
+    
+    for case_id, results in sorted(all_results.items()):
+        case_data = results['case_data']
+        weights = results['weights']
+        
+        # Write case header with multirow if needed
+        n_criteria = len(weights)
+        write(f"\\multirow{{{n_criteria}}}{{*}}{{{case_id}}} & {case_data['criteria'][0]} & {weights[0]:.3f} \\\\")
+        
+        # Write remaining criteria and weights
+        for i in range(1, n_criteria):
+            write(f"& {case_data['criteria'][i]} & {weights[i]:.3f} \\\\")
+        
+        # Add a small space between cases
+        if case_id != sorted(all_results.keys())[-1]:  # If not the last case
+            write(r"\hline")
+    
+    write(r"\hline")
+    write(r"\end{tabular}")
+    write(r"\label{tab:weights}")
+    write(r"\end{table}")
 
 def main():
     try:
@@ -267,6 +302,7 @@ def main():
         
         visualizer = MCDMVisualizer()
         all_results = {}
+        all_weights = {}
         
         # Analyze all cases
         for case_id in [f"case{i}" for i in range(1, 7)]:
@@ -276,10 +312,17 @@ def main():
             results = analyze_case(case_id, visualizer)
             all_results[case_id] = results
             
+            # Collect weights for consolidated plot
+            all_weights[case_id] = (results['case_data']['criteria'], results['weights'])
+            
             # Log key results for verification
             logger.info(f"Case {case_id} analysis complete:")
             logger.info(f"- Consistency ratio: {results['consistency_ratio']:.3f}")
             logger.info(f"- Number of alternatives: {len(results['rankings']['TOPSIS'])}")
+        
+        # Generate consolidated weights plot
+        fig = visualizer.plot_consolidated_weights(all_weights)
+        visualizer.save_figure(fig, 'results/consolidated_weights')
         
         # Save results to file only
         output_file = 'results/experimental_results.tex'

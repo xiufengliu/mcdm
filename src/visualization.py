@@ -291,3 +291,80 @@ class MCDMVisualizer:
                    bbox_inches='tight',
                    transparent=True)
         plt.close(fig) 
+
+    def plot_consolidated_weights(self, all_case_weights):
+        """Plot consolidated weights for all cases in a single figure
+        Args:
+            all_case_weights: Dictionary with case_id as key and tuple of (criteria, weights) as value
+        """
+        plt.figure(figsize=(12, 8))
+        
+        n_cases = len(all_case_weights)
+        bar_width = 0.8 / max(len(weights) for _, (_, weights) in all_case_weights.items())
+        
+        for case_idx, (case_id, (criteria, weights)) in enumerate(all_case_weights.items()):
+            x = np.arange(len(weights))
+            plt.bar(x + case_idx * bar_width, weights, 
+                   bar_width, 
+                   label=f'Case {case_id[-1]}',
+                   color=self.colors[case_idx % len(self.colors)])
+        
+        plt.xlabel('Criteria Type')
+        plt.ylabel('Weight')
+        
+        # Create common criteria categories
+        criteria_categories = {
+            'Economic': ['Investment Cost', 'Operational Cost', 'NPV', 'Payback Period', 
+                        'Economic Synergy', 'Cost-Effectiveness', 'Consumer Benefits'],
+            'Environmental': ['CO2 Reduction', 'Environmental Impact', 'Energy Efficiency', 
+                            'External Energy Dependence'],
+            'Social': ['Social Acceptance', 'Public Acceptance', 'Community Engagement', 
+                      'Stakeholder Alignment'],
+            'Technical': ['Land Use Compatibility', 'Ease of Implementation', 'Grid Dependence',
+                         'Platform Adaptability', 'Contract Feasibility', 'Scalability',
+                         'Regulatory Compliance']
+        }
+        
+        # Set x-ticks at category positions
+        plt.xticks(np.arange(4), list(criteria_categories.keys()), rotation=0)
+        
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        
+        return plt.gcf() 
+
+    def plot_cross_method_correlation(self, method_rankings):
+        """Plot correlation matrix between different MCDM methods
+        Args:
+            method_rankings: Dictionary with method names as keys and ranking arrays as values
+        """
+        # Convert rankings to numpy arrays
+        methods = list(method_rankings.keys())
+        rankings = np.array([method_rankings[m] for m in methods])
+        
+        # Calculate correlation matrix
+        corr_matrix = np.corrcoef(rankings)
+        
+        plt.figure(figsize=(8, 6))
+        im = sns.heatmap(corr_matrix,
+                        xticklabels=methods,
+                        yticklabels=methods,
+                        annot=True,
+                        fmt='.2f',
+                        cmap='RdYlBu_r',
+                        center=0,
+                        vmin=-1,
+                        vmax=1,
+                        square=True)
+        
+        # Rotate x-axis labels for better readability
+        plt.xticks(rotation=45, ha='right')
+        plt.yticks(rotation=0)
+        
+        # Add colorbar label
+        cbar = im.collections[0].colorbar
+        cbar.set_label('Correlation Coefficient', rotation=270, labelpad=15)
+        
+        plt.tight_layout()
+        return plt.gcf() 
