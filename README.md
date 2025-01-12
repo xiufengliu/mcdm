@@ -1,15 +1,15 @@
 # Multi-Criteria Decision Making (MCDM) for Industrial Excess Heat Utilization
 
 ## Overview
-This repository contains the implementation and analysis of multiple MCDM methods for evaluating industrial excess heat utilization options. The project analyzes six diverse industrial cases using five different MCDM methods (TOPSIS, WSM, WPM, VIKOR, and PROMETHEE) to provide robust decision support for industrial excess heat recovery projects.
+This repository contains the implementation and analysis of multiple MCDM methods for evaluating industrial excess heat utilization options. The project analyzes six diverse industrial cases using five different MCDM methods (including TOPSIS, WSM, WPM, VIKOR, and PROMETHEE) to provide robust decision support for industrial excess heat recovery projects.
 
 ## Key Features
 - **Multiple MCDM Methods**: Implementation of five widely-used MCDM methods:
-  - **TOPSIS**: Technique for Order Preference by Similarity to Ideal Solution
-  - **WSM**: Weighted Sum Model
-  - **WPM**: Weighted Product Model
-  - **VIKOR**: VIseKriterijumska Optimizacija I Kompromisno Resenje
-  - **PROMETHEE**: Preference Ranking Organization Method for Enrichment Evaluations
+  - Technique for Order Preference by Similarity to Ideal Solution (TOPSIS)
+  - Weighted Sum Model (WSM)
+  - Weighted Product Model (WPM)
+  - VIseKriterijumska Optimizacija I Kompromisno Resenje (VIKOR)
+  - Preference Ranking Organization Method for Enrichment Evaluations (PROMETHEE)
 
 - **Comprehensive Case Studies**:
   1. Cement Production (Portugal)
@@ -87,13 +87,13 @@ mcdm/
 | Case 3     | Industrial Park  | 3            | 4        | Multi-stakeholder context  |
 | Case 4     | District Heat    | 2            | 5        | Public infrastructure      |
 | Case 5     | Multi-DH         | 2            | 4        | Cross-sector integration   |
-| Case 6     | Food Process     | 3            | 4        | P2P energy trading         |
+| Case 6     | Food Process     | 2            | 4        | P2P energy trading         |
 
 ## Key Findings
-- **TOPSIS** demonstrated highest stability (0.991) across all cases
-- Strong correlation between **TOPSIS** and **WSM** (ρ = 0.92)
-- **VIKOR** showed increased sensitivity to weight variations
-- Statistical tests confirmed method consistency (Kendall's W = 1.000)
+-  TOPSIS demonstrated highest stability (0.991) across all cases
+-  Strong correlation between TOPSIS and WSM (ρ = 0.92)
+-  VIKOR showed increased sensitivity to weight variations
+-  Statistical tests confirmed method consistency (Kendall's W = 1.000)
 
 ## Documentation
 Detailed documentation is available in the `docs` directory:
@@ -111,7 +111,6 @@ Please cite:
 
 ```
 
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) file for details.
 
@@ -121,7 +120,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://opens
 - **Project Link**: [https://github.com/xiufengliu/mcdm](https://github.com/xiufengliu/mcdm)
 
 ## Acknowledgments
-
-```
-
 This research was supported in part by the RE-INTEGRATE project (no. 101118217) funded by the European Union Horizon 2020 research and innovation programme and by the European Union's Horizon 2020 through the EU Framework Program for Research and Innovation, within the EMB3Rs project under agreement no. 847121.
