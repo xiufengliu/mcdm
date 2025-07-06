@@ -1,0 +1,362 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Session 2: MCDM Methods - Speaker Script}
+\lfoot{MCDM for Renewable Energy}
+\rfoot{Page \thepage}
+
+\definecolor{speakernote}{RGB}{0,100,0}
+\definecolor{timing}{RGB}{200,0,0}
+\definecolor{emphasis}{RGB}{0,0,150}
+
+\title{Session 2: MCDM Methods and Techniques\\Speaker Script}
+\author{MCDM for Renewable Energy Planning}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Session 2 Introduction}
+\textcolor{timing}{\textbf{[1 minute]}}
+
+Welcome back! In Session 1, we learned the fundamentals - what MCDM is and its five key components. Now we're going to get our hands dirty with the mathematics. We'll learn four specific MCDM methods, see exactly how to calculate them, and understand when to use each one.
+
+\section*{Slide 1: Title Slide}
+\textcolor{timing}{\textbf{[30 seconds]}}
+
+Session 2: Methods and Techniques. By the end of this session, you'll know how to apply SAW, WPM, TOPSIS, and AHP to real renewable energy problems.
+
+\section*{Slide 2: Session 2 Overview}
+\textcolor{timing}{\textbf{[30 seconds]}}
+
+We'll start with an overview of the MCDM methods landscape, then dive deep into each of the four key methods, compare them, and see how they apply to our case study.
+
+\section*{Slide 3: The MCDM Methods Landscape}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+Why do we need different methods? Because different problems have different characteristics. Some have only quantitative data, others include qualitative judgments. Some are simple with few criteria, others are complex with many stakeholders. Some need quick answers, others allow time for detailed analysis.
+
+Today we'll focus on four key methods: \textcolor{emphasis}{\textbf{SAW}} - Simple Additive Weighting, \textcolor{emphasis}{\textbf{WPM}} - Weighted Product Model, \textcolor{emphasis}{\textbf{TOPSIS}} - Technique for Order Preference by Similarity to Ideal Solution, and \textcolor{emphasis}{\textbf{AHP}} - Analytic Hierarchy Process.
+
+\textcolor{speakernote}{\textbf{[Point to diagram showing simple to complex spectrum]}}
+
+Think of SAW and WPM as simpler methods good for initial analysis, while TOPSIS and AHP are more sophisticated for complex problems.
+
+\section*{Slide 4: Simple Additive Weighting (SAW)}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+Let's start with SAW - the most intuitive MCDM method. The core concept is simple: calculate the weighted sum of normalized scores for each alternative.
+
+The mathematical formula is: $S_i = \sum_{j=1}^{n} w_j \times r_{ij}$
+
+Where $S_i$ is the final score for alternative $i$, $w_j$ is the weight of criterion $j$, and $r_{ij}$ is the normalized score.
+
+\textcolor{emphasis}{\textbf{Key point:}} We normalize to make different units comparable. For benefits like efficiency, we divide by the maximum. For costs like price, we divide the minimum by the actual value.
+
+\textcolor{speakernote}{\textbf{[Write formulas on board if helpful]}}
+
+\section*{Slide 5: SAW Step-by-Step Calculation Example}
+\textcolor{timing}{\textbf{[5 minutes]}}
+
+Let me show you exactly how SAW works with a concrete example. We're choosing the best renewable energy for a small city.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Draw table with headers "Alternative", "Cost (\$/MW)", "CO₂ (tons/MWh)", "Reliability (\%)"]}}
+
+\textcolor{emphasis}{\textbf{Step 1: Decision Matrix}} - Here's our raw data. Solar costs $1200/MW, has 0.02 tons CO₂/MWh emissions, and 25% reliability. Wind costs $1600/MW, 0.01 tons CO₂/MWh, 35% reliability. Gas costs $800/MW, 0.35 tons CO₂/MWh, 85% reliability.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Fill in the table with raw data]}}
+\textcolor{speakernote}{\textbf{Solar: 1200, 0.02, 25}}
+\textcolor{speakernote}{\textbf{Wind: 1600, 0.01, 35}}
+\textcolor{speakernote}{\textbf{Gas: 800, 0.35, 85}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Before we normalize, can anyone tell me which criteria are 'good' (higher is better) and which are 'bad' (lower is better)?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If no response, prompt: "Think about cost - do you want higher cost or lower cost?"]}}
+
+\textcolor{emphasis}{\textbf{Step 2: Normalize}} - For cost (bad), we use minimum/actual. For CO₂ (bad), minimum/actual. For reliability (good), actual/maximum.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Create new table for normalized values]}}
+
+Let's do this together. For cost, what's the minimum? \textcolor{speakernote}{\textbf{[Wait for answer: 800]}} Right! So for Solar cost: 800/1200 = ?
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Can someone calculate 800 divided by 1200?"]}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write 800/1200 = 0.67]}}
+
+Solar CO₂: For emissions, what's the minimum? \textcolor{speakernote}{\textbf{[Wait for answer: 0.01]}} So 0.01/0.02 = ?
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Anyone? 0.01 divided by 0.02?"]}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write 0.01/0.02 = 0.50]}}
+
+Solar reliability: For reliability, what's the maximum? \textcolor{speakernote}{\textbf{[Wait for answer: 85]}} So 25/85 = ?
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Let's calculate together - 25 divided by 85?"]}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write 25/85 = 0.29]}}
+
+\textcolor{speakernote}{\textbf{[Work through each calculation slowly, getting student participation]}}
+
+Wind cost: 800/1600 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 0.50]}}
+Wind CO₂: 0.01/0.01 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 1.00]}}
+Wind reliability: 35/85 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 0.41]}}
+
+Gas cost: 800/800 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 1.00]}}
+Gas CO₂: 0.01/0.35 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 0.03]}}
+Gas reliability: 85/85 = ? \textcolor{speakernote}{\textbf{[Wait for answer: 1.00]}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Complete normalized table]}}
+
+\textcolor{emphasis}{\textbf{Step 3: Apply weights}} - Cost=0.3, CO₂=0.4, Reliability=0.3.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write weights above table]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Now let's calculate Solar's final score together. What's 0.67 times 0.3?"]}}
+
+Solar: 0.67×0.3 + 0.50×0.4 + 0.29×0.3 = ?
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write out the calculation step by step, getting student help]}}
+\textcolor{speakernote}{\textbf{0.67×0.3 = 0.20}}
+\textcolor{speakernote}{\textbf{0.50×0.4 = 0.20}}
+\textcolor{speakernote}{\textbf{0.29×0.3 = 0.09}}
+\textcolor{speakernote}{\textbf{Total = 0.49}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If students struggle with decimals, use calculator or round to simpler numbers]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Can someone help me calculate Wind's score?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP EXPLANATION: If students look lost, say: "Don't worry if the math feels overwhelming - the key is understanding the process. We multiply each normalized score by its weight, then add them up."]}}
+
+Great! You're doing the calculations that power MCDM decisions around the world!
+
+\section*{Slide 6: SAW Complete Calculation}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+Let me complete all the calculations:
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Complete the calculations for Wind and Gas with student help]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "We calculated Solar = 0.49. Can someone help me with Wind? What's 0.50×0.3?"]}}
+
+Wind: 0.50×0.3 + 1.00×0.4 + 0.41×0.3 = 0.15 + 0.40 + 0.12 = \textcolor{emphasis}{\textbf{0.67}} (Rank 1)
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "And Gas? What's 1.00×0.3?"]}}
+
+Gas: 1.00×0.3 + 0.03×0.4 + 1.00×0.3 = 0.30 + 0.01 + 0.30 = \textcolor{emphasis}{\textbf{0.61}} (Rank 3)
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write final ranking - Wind (0.67), Gas (0.61), Solar (0.49)]}}
+
+\textcolor{emphasis}{\textbf{Wind wins}} due to excellent environmental performance! Solar is second with balanced performance. Gas is third - cheap and reliable but high emissions hurt it.
+
+\textcolor{emphasis}{\textbf{Key insight:}} The 40% weight on CO₂ emissions made environmental performance decisive!
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "What if weights were different? Cost=0.6, CO₂=0.2, Reliability=0.2? Who thinks the ranking would change?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If time permits, quickly calculate: Gas would win with 0.82, Wind 0.58, Solar 0.56]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "This shows how important weights are! Different priorities = different winners. Any questions about SAW before we move to WPM?"]}}
+
+\section*{Slide 7: SAW Advantages and Limitations}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Draw two columns - "Advantages" and "Limitations"]}}
+
+SAW advantages: Simple and intuitive, easy to understand and explain, computationally efficient, widely accepted, good for initial screening.
+
+SAW limitations: Assumes criteria independence, linear compensation, sensitive to normalization, may not capture complex preferences, rank reversal possible.
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Based on what we just did, can anyone explain what 'linear compensation' means?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If no response, explain: "It means a bad score on one criterion can be exactly compensated by a good score on another - like poor environmental performance being offset by low cost."]}}
+
+\textcolor{emphasis}{\textbf{Best for:}} Simple problems, clear trade-offs, quantitative criteria, educational purposes.
+
+\textcolor{emphasis}{\textbf{Not ideal for:}} Interdependent criteria, non-linear preferences, qualitative assessments, complex stakeholder structures.
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Can anyone think of a situation where criteria might be interdependent in energy decisions?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP EXAMPLES: Cost and reliability often linked - cheaper options may be less reliable; environmental impact and public acceptance often correlated]}}
+
+Now let's see how WPM handles some of these limitations differently.
+
+\section*{Slide 8: Weighted Product Model (WPM)}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+WPM uses pairwise comparisons with ratio-based calculations. The key advantage is dimensionless analysis - no unit conversion needed!
+
+The formula is: $P(A_k/A_l) = \prod_{j=1}^{n} \left(\frac{a_{kj}}{a_{lj}}\right)^{w_j}$
+
+If $P(A_k/A_l) \geq 1$, then alternative $k$ is preferred over $l$.
+
+\textcolor{emphasis}{\textbf{Why is this better?}} SAW has the "adding apples and oranges" problem - Cost ($) + Efficiency (%) + Emissions (tons CO₂). Different units make comparison difficult and normalization affects results.
+
+WPM uses ratios and multiplication. Ratios are dimensionless, no normalization required, more stable results.
+
+\section*{Slide 9: WPM Example Calculation}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Let me show you WPM with the same data. Solar vs Wind comparison:
+
+$P(\text{Solar}/\text{Wind}) = \left(\frac{1600}{1200}\right)^{0.3} \times \left(\frac{0.01}{0.02}\right)^{0.4} \times \left(\frac{25}{35}\right)^{0.3}$
+
+$= (1.33)^{0.3} \times (0.5)^{0.4} \times (0.71)^{0.3} = 0.82$
+
+Since 0.82 < 1, \textcolor{emphasis}{\textbf{Wind is preferred over Solar}}.
+
+\textcolor{emphasis}{\textbf{Note:}} For costs, we use reciprocal ratios because higher cost is worse.
+
+\textcolor{speakernote}{\textbf{[Work through calculation step by step]}}
+
+\section*{Slide 10: WPM Complete Analysis}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+Let me show you all pairwise comparisons:
+
+Solar vs Wind: 0.82 < 1 → Wind preferred
+Solar vs Gas: 0.45 < 1 → Gas preferred  
+Wind vs Gas: 0.55 < 1 → Gas preferred
+
+\textcolor{emphasis}{\textbf{Ranking logic:}} Gas beats both Solar and Wind → Gas = 1st. Wind beats Solar → Wind = 2nd. Solar loses to both → Solar = 3rd.
+
+\textcolor{emphasis}{\textbf{Final WPM ranking:}} Gas > Wind > Solar
+
+\textcolor{emphasis}{\textbf{This is different from SAW!}} (SAW: Wind > Solar > Gas)
+
+\textcolor{emphasis}{\textbf{Why?}} WPM's multiplicative nature amplifies Gas's reliability advantage. The power function compounds extreme values.
+
+\section*{Slide 11: WPM Advantages and Applications}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+WPM advantages: Dimensionless analysis, no normalization needed, handles different units well, more stable than SAW, good for multiplicative relationships.
+
+WPM limitations: More complex calculations, requires positive values, less intuitive than SAW, multiplicative compensation, sensitive to extreme values.
+
+\textcolor{emphasis}{\textbf{Best for:}} Mixed units, multiplicative relationships, dimensionless analysis, stable comparisons.
+
+\textcolor{speakernote}{\textbf{[Ask: "When might multiplicative relationships be important in energy decisions?"]}}
+
+\section*{Slide 12: TOPSIS Method}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+TOPSIS ranks alternatives based on their distance from ideal and anti-ideal solutions. The core concept: the best alternative is closest to the ideal solution and farthest from the anti-ideal solution.
+
+Key steps:
+1. Normalize: $r_{ij} = \frac{x_{ij}}{\sqrt{\sum_{k=1}^{m} x_{kj}^2}}$
+2. Weight: $t_{ij} = r_{ij} \times w_j$  
+3. Determine best and worst alternatives
+4. Calculate distances: $d_{ib} = \sqrt{\sum_{j=1}^{n} (t_{ij} - t_{bj})^2}$
+5. Calculate similarity: $s_{iw} = \frac{d_{iw}}{d_{iw} + d_{ib}}$
+
+Higher $s_{iw}$ means better alternative.
+
+\section*{Slide 13: TOPSIS Visual Interpretation}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+\textcolor{speakernote}{\textbf{[Point to diagram]}}
+
+Think of this geometrically. Each alternative is a point in multi-dimensional space. The ideal solution has the best value for each criterion. The anti-ideal has the worst.
+
+TOPSIS calculates how close each alternative is to the ideal (green point) and how far from the anti-ideal (red point). Solar and Wind are both closer to ideal than Coal, but Wind is slightly better positioned.
+
+\textcolor{emphasis}{\textbf{TOPSIS logic:}} Best alternative is closest to ideal and farthest from anti-ideal.
+
+\section*{Slide 14: TOPSIS Advantages and Applications}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+TOPSIS advantages: Considers both best and worst scenarios, handles multiple criteria well, intuitive geometric interpretation, robust to outliers, good discrimination between alternatives.
+
+TOPSIS limitations: Requires quantitative data, Euclidean distance assumption, may not reflect true preferences, sensitive to criteria selection, complex for stakeholders to understand.
+
+\textcolor{emphasis}{\textbf{Best for:}} Multiple quantitative criteria, clear ideal solutions, robust ranking needs.
+
+\section*{Slide 15: Analytic Hierarchy Process (AHP)}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+AHP structures complex decisions into hierarchies and uses pairwise comparisons to derive priorities. This is the most sophisticated method we'll cover.
+
+\textcolor{speakernote}{\textbf{[Point to hierarchy diagram]}}
+
+AHP creates a hierarchy: Goal at top (Select Best Renewable Energy), Criteria in middle (Cost, Environment, Reliability), Alternatives at bottom (Solar, Wind, Hydro, Biomass).
+
+The power of AHP is handling qualitative criteria and capturing stakeholder preferences through pairwise comparisons.
+
+\section*{Slide 16: AHP Pairwise Comparison Process}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+AHP uses Saaty's 1-9 scale. 1 means equal importance, 3 is moderate importance, 5 is strong, 7 is very strong, 9 is extreme importance.
+
+\textcolor{speakernote}{\textbf{[Point to scale table]}}
+
+Look at this example criteria comparison matrix. Environment vs Cost gets a 3, meaning Environment is 3 times more important than Cost. Environment vs Reliability gets a 4, meaning Environment is 4 times more important than Reliability.
+
+\textcolor{emphasis}{\textbf{Key insight:}} This captures stakeholder preferences that are hard to quantify otherwise. How do you put a number on "public acceptance" versus "technical reliability"? AHP's pairwise comparisons make this manageable.
+
+\section*{Slide 17: AHP Consistency and Final Synthesis}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+AHP includes consistency checks. The Consistency Ratio should be less than 0.1. If it's higher, you need to revise your judgments because they're contradictory.
+
+Final synthesis combines all the pairwise comparisons: $S_i = \sum_{j=1}^{n} w_j \times w_{ij}$
+
+AHP advantages: Handles qualitative criteria, captures stakeholder preferences, provides consistency checks, hierarchical structure clarity.
+
+\textcolor{emphasis}{\textbf{This is why AHP is powerful for energy decisions}} - you can include "public acceptance" and "environmental justice" alongside technical and economic criteria.
+
+\section*{Slide 18: When to Use Which Method?}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+\textcolor{speakernote}{\textbf{[Point to comparison table]}}
+
+SAW: High simplicity, low data requirements, limited stakeholder input. Best for simple problems, quantitative criteria, educational purposes.
+
+WPM: Medium simplicity, low data requirements, limited stakeholder input. Best for mixed units, multiplicative relationships, dimensionless analysis.
+
+TOPSIS: Medium simplicity, medium data requirements, medium stakeholder input. Best for multiple quantitative criteria, clear ideal solutions.
+
+AHP: Low simplicity, high data requirements, high stakeholder input. Best for complex hierarchies, qualitative criteria, stakeholder involvement.
+
+\textcolor{emphasis}{\textbf{Selection depends on:}} Data availability, stakeholder involvement needs, problem complexity, time and resource constraints.
+
+\section*{Slide 19: Case Study Application}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Let's see how our four methods apply to the rural India solar project. All methods agree: Diesel generator is the worst option. Solar solutions consistently rank in top 2. But notice the differences:
+
+SAW and WPM both put Solar Microgrid first. TOPSIS puts Solar Microgrid first but Grid Extension second. AHP puts Solar Home systems first.
+
+\textcolor{emphasis}{\textbf{Why the differences?}} AHP reflects stakeholder preferences for distributed solutions. TOPSIS considers ideal solutions differently. WPM emphasizes multiplicative effects.
+
+\textcolor{emphasis}{\textbf{Key insight:}} All methods agree on the general pattern, but stakeholder preferences (captured by AHP) can shift the ranking between similar alternatives.
+
+\textcolor{emphasis}{\textbf{Recommendation:}} Solar microgrid with sensitivity analysis on key assumptions.
+
+\section*{Slide 20: Session 2 Summary}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+Key takeaways:
+1. Different MCDM methods suit different problem types
+2. SAW: Simple and intuitive, good for initial analysis  
+3. WPM: Dimensionless, handles mixed units well
+4. TOPSIS: Considers ideal solutions, robust ranking
+5. AHP: Hierarchical structure, stakeholder preferences
+
+Method selection depends on data availability and quality, stakeholder involvement needs, problem complexity, time and resource constraints.
+
+\textcolor{emphasis}{\textbf{Next session:}} Advanced applications, implementation strategies, and software tools.
+
+\textcolor{emphasis}{\textbf{Questions?}}
+
+\section*{Transition to Session 3}
+\textcolor{timing}{\textbf{[1 minute]}}
+
+Excellent! Now you understand both the concepts and the calculations. In Session 3, we'll learn how to implement these methods in practice, avoid common pitfalls, and prepare for your group work this afternoon.
+
+\textcolor{speakernote}{\textbf{[15-minute break if scheduled]}}
+
+\end{document}

@@ -1,0 +1,310 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Session 1: MCDM Fundamentals - Speaker Script}
+\lfoot{MCDM for Renewable Energy}
+\rfoot{Page \thepage}
+
+\definecolor{speakernote}{RGB}{0,100,0}
+\definecolor{timing}{RGB}{200,0,0}
+\definecolor{emphasis}{RGB}{0,0,150}
+
+\title{Session 1: MCDM Fundamentals\\Speaker Script}
+\author{MCDM for Renewable Energy Planning}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Pre-Session Setup (5 minutes before start)}
+\textcolor{timing}{\textbf{[Check microphone, projector, handouts ready]}}
+
+Good morning everyone! Welcome to our course on Multi-Criteria Decision Making for Renewable Energy Planning. I'm [Your Name], and over the next three sessions, we'll explore how to make systematic, transparent decisions about complex energy problems.
+
+\textcolor{speakernote}{\textbf{[Pause for any latecomers, ensure everyone can see/hear]}}
+
+\section*{Slide 1: Title Slide}
+\textcolor{timing}{\textbf{[1 minute]}}
+
+Today we begin with Session 1: Fundamentals and Components. By the end of today's morning sessions, you'll understand what MCDM is, why it's crucial for renewable energy decisions, and you'll be ready for hands-on group work this afternoon.
+
+\section*{Slide 2: Session Overview}
+\textcolor{timing}{\textbf{[1 minute]}}
+
+Let me outline what we'll cover in this first session. We'll start with the basics - what is MCDM and why do we need it? Then we'll dive into the five key components that make up any MCDM analysis. We'll look at a real case study, and finally prepare you for the group work this afternoon.
+
+\textcolor{speakernote}{\textbf{[Point to each section on the outline]}}
+
+\section*{Slide 3: What is Multi-Criteria Decision Making?}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+Let's start with a simple definition: \textcolor{emphasis}{\textbf{MCDM helps us choose the best option when we have multiple goals that conflict with each other.}}
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write "MCDM = Multiple Conflicting Goals" on board]}}
+
+Think about buying a car - a decision most of you have probably faced. \textcolor{speakernote}{\textbf{[INTERACTION: "Raise your hand if you've bought a car or helped someone buy one"]}} You want low cost, but you also want high safety. You want fuel efficiency, but maybe you also want performance. You want reliability, but you might also care about style.
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Can anyone give me an example of two car features that conflict with each other?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If no response, prompt: "What about sports car performance versus fuel economy?"]}}
+
+No single car is best at everything, right?
+
+\textcolor{speakernote}{\textbf{[Pause for nods/agreement]}}
+
+Energy decisions are similar but much more complex. We want cheap energy, but we also want clean energy. We want reliable power, but we also want renewable sources. We want something quick to build, but also long-term sustainable.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Draw simple diagram showing "Cheap ↔ Clean", "Reliable ↔ Renewable"]}}
+
+\textcolor{emphasis}{\textbf{The fundamental challenge is that no single option is best at everything!}} This is where MCDM comes in - it gives us a systematic way to handle these trade-offs.
+
+\textcolor{speakernote}{\textbf{[BACKUP EXPLANATION: If students look confused, add: "Think of it as a structured way to make the same kind of trade-off decisions you make every day, but for complex problems with lots of factors."]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Before we continue, can anyone think of another decision in your life where you had to balance multiple conflicting goals?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP EXAMPLES: Choosing university (cost vs. prestige vs. location), choosing apartment (rent vs. location vs. size), choosing job (salary vs. work-life balance vs. career growth)]}}
+
+This systematic approach becomes absolutely critical when we're dealing with energy decisions that affect millions of people and billions of dollars.
+
+\section*{Slide 4: Why MCDM for Renewable Energy?}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Energy decisions are especially complex because they involve multiple stakeholders with different priorities. Let me give you some examples:
+
+\textcolor{emphasis}{\textbf{Government}} cares about policy goals - meeting climate targets, energy security, economic development.
+
+\textcolor{emphasis}{\textbf{Utilities}} focus on profit and reliability - they need systems that work and make money.
+
+\textcolor{emphasis}{\textbf{Communities}} care about jobs, health impacts, and local benefits.
+
+\textcolor{emphasis}{\textbf{Investors}} want returns on their investment.
+
+\textcolor{emphasis}{\textbf{Environmental groups}} prioritize sustainability and emissions reduction.
+
+\textcolor{speakernote}{\textbf{[Ask: "Can anyone think of other stakeholders?"]}}
+
+These decisions also have long-term impacts - we're talking about 20-30 year investments. Technology changes, climate effects evolve, policies shift. And the stakes are high - billions of dollars, climate targets, energy security, economic development.
+
+\textcolor{emphasis}{\textbf{MCDM provides a systematic way to handle this complexity!}} Instead of making decisions based on politics or the loudest voice, we can use a transparent, rational process.
+
+\section*{Slide 5: Real-World Example: Urban Energy Planning}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Let me give you a concrete example. Imagine you're advising the city of Austin, Texas. Population 500,000, current demand 800 MW, but they need an additional 320 MW by 2035. They must also reduce CO₂ emissions by 50% while maintaining reliability and affordability.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write key numbers on board - "Austin: 500k people, need +320 MW by 2035, -50% CO₂"]}}
+
+Look at these options: Solar farm costs $600M for 500 MW. Wind park costs $800M for 400 MW. Natural gas is only $400M for 320 MW. Nuclear is $8B for 1000 MW - massive but expensive and controversial.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Create simple table on board]}}
+\textcolor{speakernote}{\textbf{Solar: $600M/500MW}}
+\textcolor{speakernote}{\textbf{Wind: $800M/400MW}}
+\textcolor{speakernote}{\textbf{Gas: $400M/320MW}}
+\textcolor{speakernote}{\textbf{Nuclear: $8B/1000MW}}
+
+\textcolor{speakernote}{\textbf{[Point to each alternative on slide]}}
+
+Now look at the dilemma: Solar is clean but expensive. Gas is cheap but polluting. Nuclear is reliable but controversial. Wind is variable but popular.
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "If you were the mayor of Austin, which would you choose and why? Let's take a quick poll - raise your hand for your choice."]}}
+
+\textcolor{speakernote}{\textbf{[Count hands for each option, write numbers on board]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Interesting! We have different preferences. Can someone who chose solar tell me why?"]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "How about someone who chose gas - what was your reasoning?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If students are shy, prompt: "I see some people chose different options. The person in the red shirt - what influenced your choice?"]}}
+
+\textcolor{emphasis}{\textbf{How do you choose?}} Without a systematic approach, you might focus only on cost (choose gas), or only on environment (choose solar), or get stuck in political debates about nuclear.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Circle the different vote counts and write "Different priorities = Different choices"]}}
+
+This is exactly what happens in real city councils! Different people focus on different factors. MCDM gives us a way to consider ALL factors systematically!
+
+\textcolor{speakernote}{\textbf{[BACKUP EXPLANATION: If students seem skeptical, add: "This isn't about finding the 'right' answer - it's about making the decision process transparent and defensible to all stakeholders."]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "What other factors might the city need to consider that we haven't mentioned yet?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP PROMPTS: Jobs, construction time, public health, grid integration, future flexibility]}}
+
+Great observations! You're already thinking like MCDM analysts.
+
+\section*{Slide 6: The Problem Without MCDM}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+What happens when we don't use systematic decision-making? We get bias - usually focusing on just one criterion like cost. We get politics - the loudest voice wins. We get inconsistency - different standards for different options. We get regret - overlooking important factors. And we get conflict - stakeholders fighting over priorities.
+
+\textcolor{speakernote}{\textbf{[Ask: "Has anyone experienced this in their work or studies?"]}}
+
+Look at these real examples: Germany's nuclear phase-out was largely political rather than technical. California's energy crisis focused too much on deregulation without considering reliability. Texas's winter storm showed the cost of prioritizing cost over reliability. UK wind farms face opposition because environment versus aesthetics weren't balanced.
+
+\textcolor{emphasis}{\textbf{MCDM moves us from ad-hoc decisions to systematic processes - from biased and inconsistent to systematic and transparent.}}
+
+\section*{Slide 7: The Five Key Components of MCDM}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+Every MCDM analysis has five key components, and we'll spend the rest of this session understanding each one:
+
+1. \textcolor{emphasis}{\textbf{Defining Alternatives}} - What are our options?
+2. \textcolor{emphasis}{\textbf{Establishing Criteria}} - How do we evaluate?
+3. \textcolor{emphasis}{\textbf{Weighting \& Scoring}} - What matters most?
+4. \textcolor{emphasis}{\textbf{Aggregation \& Ranking}} - How do we combine information?
+5. \textcolor{emphasis}{\textbf{Sensitivity Analysis}} - How robust are our results?
+
+\textcolor{speakernote}{\textbf{[Point to the flow diagram showing the iterative process]}}
+
+Notice this is an iterative process with feedback loops. You might discover something in sensitivity analysis that makes you reconsider your weights, or stakeholder feedback might make you add new alternatives.
+
+\section*{Slide 8: Component 1: Defining Alternatives}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+Alternatives are the possible solutions we want to compare and choose from. In renewable energy, these might be different types of energy sources, various technology configurations, different scales of implementation, or hybrid systems.
+
+Let me give you a concrete example: Rural electrification. Your alternatives might be grid extension, mini-grid solar, solar home systems, micro-hydroelectric, biomass gasification, or hybrid renewable systems.
+
+\textcolor{emphasis}{\textbf{Key considerations:}} Are they feasible and available? Are they mutually exclusive - can you only choose one? Is your list complete - are you missing important options? Do they reflect stakeholder preferences?
+
+\textcolor{speakernote}{\textbf{[Ask: "For the Austin example, what alternatives might we be missing?"]}}
+
+\section*{Slide 9: Component 2: Establishing Criteria}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Criteria are the factors we consider in decision-making - the aspects we want to evaluate and optimize. For renewable energy, we typically think about three dimensions:
+
+\textcolor{emphasis}{\textbf{Economic criteria:}} Initial cost (CAPEX), operating cost (OPEX), payback period, net present value, job creation.
+
+\textcolor{emphasis}{\textbf{Environmental criteria:}} CO₂ emissions, land use impact, water consumption, waste generation, biodiversity impact.
+
+\textcolor{emphasis}{\textbf{Technical and social criteria:}} Reliability, efficiency, scalability, public acceptance, energy security.
+
+\textcolor{speakernote}{\textbf{[Point to each column as you discuss]}}
+
+\textcolor{emphasis}{\textbf{Important:}} Criteria should be comprehensive - covering all important aspects. Measurable - you can assign meaningful scores. And non-redundant - they shouldn't overlap or double-count.
+
+\textcolor{speakernote}{\textbf{[Ask: "What criteria might be missing for a university campus energy decision?"]}}
+
+\section*{Slide 10: Component 3: Weighting and Scoring}
+\textcolor{timing}{\textbf{[5 minutes]}}
+
+Now we get to the heart of MCDM - weighting and scoring. Weighting asks "What matters most?" and scoring asks "How well does each option perform?"
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write "Weighting = What matters most?" and "Scoring = How well does each perform?"]}}
+
+Let me show you how different stakeholders might weight the same criteria differently:
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Create three columns on board for different stakeholders]}}
+
+A \textcolor{emphasis}{\textbf{utility}} might say: Cost 50%, Reliability 30%, Environment 20%
+An \textcolor{emphasis}{\textbf{environmental group}} might say: Environment 60%, Cost 20%, Reliability 20%
+A \textcolor{emphasis}{\textbf{community}} might say: Jobs 40%, Cost 30%, Environment 30%
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write these weights in the three columns]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Look at these different weights. Why do you think the utility puts 50% on cost while the environmental group puts only 20%?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If no response, prompt: "Think about what each group's main concerns and responsibilities are."]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "If you were representing students at a university, how might you weight these criteria differently?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP EXAMPLES: Students might prioritize educational value, long-term thinking, environmental impact over short-term costs]}}
+
+For scoring, we need objective data when possible. Cost might be $1200/MW from actual bids. CO₂ might be 0.02 tons/MWh from measurements. Acceptance might be 7/10 from survey results. Reliability might be 35% capacity factor from technical studies.
+
+\textcolor{speakernote}{\textbf{[BOARD WORK: Write example scores - "Cost: $1200/MW (actual)", "CO₂: 0.02 tons/MWh (measured)", "Acceptance: 7/10 (survey)"]}}
+
+Look at this complete example. \textcolor{speakernote}{\textbf{[Point to table]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "Looking at this table, if you had to make a quick decision right now, which technology would you choose and why?"]}}
+
+\textcolor{speakernote}{\textbf{[INTERACTION: "What if I told you the weights were Cost 60%, CO₂ 30%, Reliability 10% - would that change your choice?"]}}
+
+\textcolor{speakernote}{\textbf{[BACKUP: If students struggle, walk through: "Gas has lowest cost but highest CO₂. Solar has medium cost and lowest CO₂. Wind has highest cost but medium CO₂ and reliability."]}}
+
+This is exactly the kind of analysis you'll do this afternoon! You'll see how changing weights can completely change which option looks best.
+
+\textcolor{speakernote}{\textbf{[BACKUP EXPLANATION: If students look overwhelmed, add: "Don't worry about the math right now - we'll learn the calculations in Session 2. The key insight is that different priorities lead to different choices."]}}
+
+The beauty of MCDM is that it makes these trade-offs explicit and transparent rather than hidden in someone's head.
+
+\section*{Slide 11: Component 4: Aggregation and Ranking}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+Aggregation combines scores and weights to calculate overall value. Ranking orders alternatives from best to worst. We have different mathematical methods for this - SAW, WPM, TOPSIS, AHP - and we'll learn these in detail in Session 2.
+
+\textcolor{speakernote}{\textbf{[Point to formulas but don't explain in detail]}}
+
+The key point is that different methods can give different rankings, which is why we need to understand when to use which method.
+
+\section*{Slide 12: Component 5: Sensitivity Analysis}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Sensitivity analysis tests how changes in weights, scores, or methods affect the final ranking. This is crucial for renewable energy decisions because:
+
+Energy planning involves long-term commitments. Technology costs and performance change over time. Policy priorities may shift. Stakeholder preferences may vary.
+
+\textcolor{emphasis}{\textbf{The key question is: Are our conclusions robust to reasonable changes in assumptions?}}
+
+We might test weight sensitivity - how do changes in criterion weights affect ranking? Score sensitivity - how do changes in performance scores affect results? Method sensitivity - do different MCDM methods give similar results? Scenario analysis - how do different future scenarios affect decisions?
+
+\textcolor{speakernote}{\textbf{[Ask: "Why might solar panel costs change over the next 10 years?"]}}
+
+\section*{Slide 13: Case Study: Rural Electrification in Rajasthan, India}
+\textcolor{timing}{\textbf{[4 minutes]}}
+
+Let me give you a real scenario we'll explore in detail in Session 2. Village cluster with 2,500 households in Rajasthan. Currently only 30% have grid connection, averaging 6 hours per day. Goal: reliable 16+ hours per day electricity for all households by 2025.
+
+Look at these alternatives with real data:
+- Grid extension: $800/household, 12 hrs/day
+- Diesel generators: $200/household but $0.25/kWh fuel cost
+- Solar home systems: $600/household, 8 hrs/day  
+- Solar microgrid: $1000/household, 18 hrs/day
+
+\textcolor{speakernote}{\textbf{[Point to each alternative]}}
+
+The government weights are: cost 40%, reliability 30%, environment 20%, social 10%.
+
+\textcolor{emphasis}{\textbf{Interesting result: Solar microgrid wins despite higher upfront cost!}} In Session 2, we'll calculate this step-by-step and see why.
+
+\section*{Slide 14: Afternoon Group Work Preview}
+\textcolor{timing}{\textbf{[3 minutes]}}
+
+This afternoon, each group will tackle a different renewable energy planning problem. We have six different scenarios: regional energy planning for a city, campus energy planning for a university, rural electrification, industrial energy selection, residential energy systems, and community energy projects.
+
+Your tasks will be to define the problem context, identify alternatives and criteria, assign weights through group consensus, apply MCDM methods, perform sensitivity analysis, and present recommendations.
+
+\textcolor{speakernote}{\textbf{[Point to each task]}}
+
+You'll have access to our interactive MCDM learning tool, Excel templates, and pre-loaded example problems.
+
+\textcolor{emphasis}{\textbf{Start thinking: What renewable energy challenges interest your group most?}}
+
+\section*{Slide 15: Session 1 Summary}
+\textcolor{timing}{\textbf{[2 minutes]}}
+
+Let me summarize our key takeaways:
+
+1. MCDM provides a systematic approach to complex energy decisions
+2. Five key components: Alternatives, Criteria, Weighting/Scoring, Aggregation, Sensitivity
+3. Renewable energy decisions involve economic, environmental, and social trade-offs
+4. Sensitivity analysis is crucial for robust decision-making
+
+Coming up: Session 2 will teach you the specific methods - SAW, WPM, TOPSIS, AHP. Session 3 will cover implementation and prepare you for group work. This afternoon you'll apply everything hands-on with real energy problems.
+
+\textcolor{emphasis}{\textbf{Questions before we move to Session 2?}}
+
+\textcolor{speakernote}{\textbf{[Take 2-3 questions, then transition]}}
+
+\section*{Transition to Session 2}
+\textcolor{timing}{\textbf{[1 minute]}}
+
+Excellent! Now that you understand the fundamentals, let's learn the specific mathematical methods that make MCDM work. In Session 2, we'll dive into the calculations and see exactly how to apply these concepts.
+
+\textcolor{speakernote}{\textbf{[15-minute break if scheduled, otherwise continue directly]}}
+
+\end{document}
