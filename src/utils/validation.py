@@ -41,7 +41,9 @@ def validate_decision_matrix(matrix):
     if (matrix == 0).any().any():
         errors.append("Warning: Decision matrix contains zero values")
     
-    return len(errors) == 0, errors
+    # Only non-warning messages should affect validity
+    is_valid = len([e for e in errors if not e.startswith("Warning:")]) == 0
+    return is_valid, errors
 
 def validate_weights(weights):
     """

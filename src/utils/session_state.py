@@ -68,15 +68,15 @@ def load_example_problem(example_name):
         st.session_state.criteria = example["criteria"]
         st.session_state.criterion_types = example["criterion_types"]
 
-        # Handle weights (may be None for AHP examples)
-        if example["weights"] is not None:
+        # Handle weights (may be None or missing for AHP examples)
+        if example.get("weights") is not None:
             st.session_state.weights = example["weights"]
         else:
             n_criteria = len(example["criteria"])
             st.session_state.weights = [1.0/n_criteria] * n_criteria
 
-        # Create decision matrix DataFrame (may be None for AHP examples)
-        if example["decision_matrix"] is not None:
+        # Create decision matrix DataFrame (may be None or missing for AHP examples)
+        if example.get("decision_matrix") is not None:
             st.session_state.decision_matrix = pd.DataFrame(
                 example["decision_matrix"],
                 index=example["alternatives"],

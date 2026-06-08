@@ -391,10 +391,13 @@ def render_visualizations_tab():
         if len(st.session_state.alternatives) <= 5:  # Only for small number of alternatives
             st.subheader("Multi-Criteria Comparison")
 
+            # Show the top-3 ranked alternatives (not just the first three by input order)
+            top_alternatives = results_df.sort_values('Rank')['Alternative'].head(3).tolist()
+
             comparison_fig = create_comparison_chart(
                 st.session_state.decision_matrix,
                 st.session_state.criteria,
-                st.session_state.alternatives[:3]  # Top 3 alternatives
+                top_alternatives
             )
             if comparison_fig:
                 st.plotly_chart(comparison_fig, use_container_width=True)

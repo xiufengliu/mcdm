@@ -23,10 +23,12 @@ def create_results_chart(results_df, method_name):
     df_sorted = results_df.sort_values('Rank')
     
     # Create color scale based on rank (best = green, worst = red)
-    colors = px.colors.sample_colorscale(
-        'RdYlGn_r', 
-        [i/(len(df_sorted)-1) for i in range(len(df_sorted))]
-    )
+    n = len(df_sorted)
+    if n > 1:
+        sample_points = [i / (n - 1) for i in range(n)]
+    else:
+        sample_points = [0.0]
+    colors = px.colors.sample_colorscale('RdYlGn_r', sample_points)
     
     fig = go.Figure(data=[
         go.Bar(

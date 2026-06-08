@@ -32,7 +32,12 @@ class WPM(MCDMMethod):
         n_alternatives = len(self.alternatives)
 
         # Step 1: Handle cost criteria by taking reciprocals (convert to benefit)
-        processed_matrix = matrix.copy()
+        processed_matrix = matrix.copy().astype(float)
+        if (matrix == 0).any().any():
+            raise ValueError(
+                "WPM cannot process a decision matrix containing zero values "
+                "(division by zero). Please use non-zero values."
+            )
         for i, (col, ctype) in enumerate(zip(matrix.columns, self.criterion_types)):
             if ctype == 'cost':
                 # For cost criteria, use reciprocal (1/x) to convert to benefit

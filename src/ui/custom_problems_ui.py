@@ -246,12 +246,18 @@ def render_manage_problems_tab():
                     # Load this problem into session state
                     try:
                         # Convert back to the format expected by load_example_problem
+                        criteria_list = problem.get("criteria", [])
+                        n_crit = len(criteria_list)
+                        weights = problem.get("weights")
+                        if not weights:
+                            weights = [1.0 / n_crit] * n_crit if n_crit else []
+
                         problem_data = {
-                            "alternatives": problem["alternatives"],
-                            "criteria": problem["criteria"],
-                            "criterion_types": problem["criterion_types"],
-                            "weights": problem["weights"],
-                            "decision_matrix": problem["decision_matrix"]
+                            "alternatives": problem.get("alternatives", []),
+                            "criteria": criteria_list,
+                            "criterion_types": problem.get("criterion_types", []),
+                            "weights": weights,
+                            "decision_matrix": problem.get("decision_matrix")
                         }
                         
                         # Load into session state

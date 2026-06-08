@@ -38,13 +38,19 @@ class MCDMMethod(ABC):
     def _prepare_matrix(self, matrix, alternatives=None, criteria=None):
         """Convert matrix to DataFrame with proper index and columns"""
         if isinstance(matrix, pd.DataFrame):
-            return matrix
+            df = matrix.copy()
         else:
             if alternatives is None:
                 alternatives = [f"A{i+1}" for i in range(matrix.shape[0])]
             if criteria is None:
                 criteria = [f"C{i+1}" for i in range(matrix.shape[1])]
-            return pd.DataFrame(matrix, index=alternatives, columns=criteria)
+            df = pd.DataFrame(matrix, index=alternatives, columns=criteria)
+
+        # Ensure numeric dtype. Matrices built incrementally (e.g. via the UI)
+        # can end up with 'object' dtype, which breaks numeric operations and
+        # min/max comparisons in the methods.
+        df = df.apply(pd.to_numeric, errors='coerce')
+        return df
     
     def _validate_inputs(self):
         """Validate input parameters"""
@@ -79,23 +85,33 @@ class MCDMMethod(ABC):
             # Linear normalization (min-max)
             for i, (col, ctype) in enumerate(zip(matrix.columns, self.criterion_types)):
                 col_values = matrix[col]
-                if ctype == 'benefit':
+                value_range = col_values.max() - col_values.min()
+                if value_range == 0:
+                    # All values identical: assign neutral normalized value
+                    matrix[col] = 1.0
+                elif ctype == 'benefit':
                     # For benefit criteria: (x - min) / (max - min)
-                    matrix[col] = (col_values - col_values.min()) / (col_values.max() - col_values.min())
+                    matrix[col] = (col_values - col_values.min()) / value_range
                 else:
                     # For cost criteria: (max - x) / (max - min)
-                    matrix[col] = (col_values.max() - col_values) / (col_values.max() - col_values.min())
+                    matrix[col] = (col_values.max() - col_values) / value_range
         
         elif method == 'vector':
             # Vector normalization
             for i, (col, ctype) in enumerate(zip(matrix.columns, self.criterion_types)):
                 col_values = matrix[col]
-                norm = np.sqrt(np.sum(col_values**2))
                 if ctype == 'benefit':
-                    matrix[col] = col_values / norm
+                    norm = np.sqrt(np.sum(col_values**2))
+                    matrix[col] = col_values / norm if norm != 0 else 0.0
                 else:
-                    # For cost criteria, invert after normalization
-                    matrix[col] = (1 / col_values) / np.sqrt(np.sum((1 / col_values)**2))
+                    # For cost criteria, invert after normalization.
+                    # Guard against division by zero.
+                    if (col_values == 0).any():
+                        matrix[col] = 0.0
+                    else:
+                        inv = 1.0 / col_values
+                        inv_norm = np.sqrt(np.sum(inv**2))
+                        matrix[col] = inv / inv_norm if inv_norm != 0 else 0.0
         
         return matrix
     
@@ -120,9 +136,14 @@ class MCDMMethod(ABC):
         Returns:
             list: Rankings (1-based)
         """
-        # Higher scores get better (lower) rankings
-        rankings = np.argsort(np.argsort(scores)[::-1]) + 1
-        return rankings.tolist()
+        # Higher scores get better (lower) rankings.
+        # Ties receive the same rank (standard competition ranking).
+        scores = np.asarray(scores, dtype=float)
+        rankings = []
+        for score in scores:
+            rank = int(np.sum(scores > score)) + 1
+            rankings.append(rank)
+        return rankings
     
     def get_results_dataframe(self):
         """

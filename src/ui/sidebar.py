@@ -261,7 +261,8 @@ def render_criteria_weights():
         # Validate and normalize weights
         is_valid, errors, normalized_weights = validate_weights(new_weights)
         
-        if normalized_weights:
+        # Only apply weights when they are valid (e.g. reject negative weights)
+        if is_valid and normalized_weights:
             st.session_state.weights = normalized_weights
         
         # Display validation messages
