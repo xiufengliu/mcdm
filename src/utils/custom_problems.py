@@ -3,25 +3,28 @@ Custom problem management for user-defined MCDM problems
 """
 
 import json
-import os
 import pandas as pd
 import streamlit as st
 from datetime import datetime
 from typing import Dict, List, Optional
 
-# Directory to store custom problems
-CUSTOM_PROBLEMS_DIR = "data/custom_problems"
+# Session state key under which a student's custom problems are stored.
+# Storing per-session (instead of a shared folder on disk) keeps every
+# student's custom problems isolated so concurrent users don't see,
+# overwrite, or delete each other's problems.
+CUSTOM_PROBLEMS_KEY = "custom_problems_store"
 
-def ensure_custom_problems_dir():
-    """Ensure the custom problems directory exists"""
-    if not os.path.exists(CUSTOM_PROBLEMS_DIR):
-        os.makedirs(CUSTOM_PROBLEMS_DIR)
+def _get_store() -> Dict[str, Dict]:
+    """Return this session's custom problems store, creating it if needed."""
+    if CUSTOM_PROBLEMS_KEY not in st.session_state:
+        st.session_state[CUSTOM_PROBLEMS_KEY] = {}
+    return st.session_state[CUSTOM_PROBLEMS_KEY]
 
 def save_custom_problem(name: str, description: str, alternatives: List[str], 
                        criteria: List[str], criterion_types: List[str], 
                        decision_matrix: pd.DataFrame, weights: List[float]) -> bool:
     """
-    Save a custom problem to file
+    Save a custom problem to the current session
     
     Args:
         name: Problem name
@@ -36,8 +39,6 @@ def save_custom_problem(name: str, description: str, alternatives: List[str],
         bool: True if saved successfully, False otherwise
     """
     try:
-        ensure_custom_problems_dir()
-        
         # Create problem data structure
         problem_data = {
             "name": name,
@@ -51,12 +52,8 @@ def save_custom_problem(name: str, description: str, alternatives: List[str],
             "custom": True
         }
         
-        # Save to JSON file
-        filename = f"{name.replace(' ', '_').replace('/', '_')}.json"
-        filepath = os.path.join(CUSTOM_PROBLEMS_DIR, filename)
-        
-        with open(filepath, 'w') as f:
-            json.dump(problem_data, f, indent=2)
+        # Store in this session only
+        _get_store()[name] = problem_data
         
         return True
         
@@ -66,40 +63,17 @@ def save_custom_problem(name: str, description: str, alternatives: List[str],
 
 def load_custom_problems() -> Dict[str, Dict]:
     """
-    Load all custom problems from files
+    Load all custom problems for the current session
     
     Returns:
         Dict: Dictionary of custom problems
     """
-    custom_problems = {}
-    
-    try:
-        ensure_custom_problems_dir()
-        
-        # Load all JSON files in the custom problems directory
-        for filename in os.listdir(CUSTOM_PROBLEMS_DIR):
-            if filename.endswith('.json'):
-                filepath = os.path.join(CUSTOM_PROBLEMS_DIR, filename)
-                
-                try:
-                    with open(filepath, 'r') as f:
-                        problem_data = json.load(f)
-                    
-                    # Add to custom problems dictionary
-                    problem_name = problem_data.get('name', filename[:-5])
-                    custom_problems[problem_name] = problem_data
-                    
-                except Exception as e:
-                    st.warning(f"Could not load custom problem from {filename}: {str(e)}")
-                    
-    except Exception as e:
-        st.warning(f"Could not access custom problems directory: {str(e)}")
-    
-    return custom_problems
+    # Return a shallow copy so callers can't mutate the store directly
+    return dict(_get_store())
 
 def delete_custom_problem(name: str) -> bool:
     """
-    Delete a custom problem
+    Delete a custom problem from the current session
     
     Args:
         name: Problem name to delete
@@ -108,11 +82,9 @@ def delete_custom_problem(name: str) -> bool:
         bool: True if deleted successfully, False otherwise
     """
     try:
-        filename = f"{name.replace(' ', '_').replace('/', '_')}.json"
-        filepath = os.path.join(CUSTOM_PROBLEMS_DIR, filename)
-        
-        if os.path.exists(filepath):
-            os.remove(filepath)
+        store = _get_store()
+        if name in store:
+            del store[name]
             return True
         else:
             st.warning(f"Custom problem '{name}' not found")
@@ -133,12 +105,9 @@ def export_custom_problem(name: str) -> Optional[str]:
         str: JSON string of the problem, or None if error
     """
     try:
-        filename = f"{name.replace(' ', '_').replace('/', '_')}.json"
-        filepath = os.path.join(CUSTOM_PROBLEMS_DIR, filename)
-        
-        if os.path.exists(filepath):
-            with open(filepath, 'r') as f:
-                return f.read()
+        store = _get_store()
+        if name in store:
+            return json.dumps(store[name], indent=2)
         else:
             st.warning(f"Custom problem '{name}' not found")
             return None
@@ -206,7 +175,7 @@ def get_all_problems():
     # Start with built-in problems
     all_problems = EXAMPLE_PROBLEMS.copy()
     
-    # Add custom problems
+    # Add custom problems (per-session)
     custom_problems = load_custom_problems()
     for name, problem in custom_problems.items():
         # Mark as custom and add to all problems
